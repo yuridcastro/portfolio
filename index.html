@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Yuri de Castro — Designer de Experiência do Usuário (UX/UI) e estudante de Sistemas e Mídias Digitais. Veja projetos práticos, estudos de caso, habilidades em Figma, prototipação, usabilidade e soluções inovadoras para empresas. Aberto a oportunidades de estágio e vagas em UX, UI e tecnologia.">
+    <title>YDHC | Yuri de Castro | Portfólio UX</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' font-family='Helvetica Neue, Helvetica, Arial, sans-serif' fill='%23111111'>YDHC</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700;900&display=swap" rel="stylesheet"> <!-- Usando Helvetica via Google Fonts como fallback -->
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">YDHC</div>
+            <nav class="nav" id="main-nav">
+                <a href="#about" data-i18n="navAbout">SOBRE</a>
+                <a href="#projetos" data-i18n="navProjects">PROJETOS</a>
+                <a href="#programas" data-i18n="navPrograms">FERRAMENTAS</a>
+                <a href="#livros" data-i18n="navReadings">LEITURAS</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="toggle-group">
+                <button id="langToggle" class="lang-btn" aria-label="Mudar idioma">
+                    <img id="langFlag" src="" alt="" width="24" height="18">
+                    <span id="langLabel" class="lang-label"></span>
+                </button>
+                <button id="themeToggleBtn" class="theme-btn" aria-label="Alternar Tema" aria-pressed="false" title="Alternar Tema">
+                    <!-- Ícone será adicionado via CSS/JS -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Adiciona <main> para semântica e acessibilidade -->
+    <main id="main-content">
+
+        <!-- Hero Section Minimalista -->
+        <section id="hero" class="section hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="hero-title"><span>YURI DE CASTRO</span><span class="typing-cursor">|</span></h1>
+                <h2 class="tagline"><span>Designer de Experiência do Usuário & Estudante de Sistemas e Mídias Digitais</span><span class="typing-cursor">|</span></h2>
+            </div>
+        </section>
+
+        <!-- Sobre mim focado em UX -->
+        <section id="about" class="section about" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading" data-i18n="aboutTitle">Sobre Mim</h2>
+                <p data-i18n="aboutBio">Sou um estudante apaixonado por Sistemas e Mídias Digitais com foco em Design de Experiência do Usuário (UX), residente no Brasil. Minha especialidade reside na criação de fluxos de usuário intuitivos e eficientes, transformando ideias complexas em interfaces elegantes e funcionais. Domino ferramentas como Figma e Cursor, aplicando uma abordagem centrada no usuário para resolver problemas e criar produtos digitais impactantes. Estou sempre buscando oportunidades para aplicar e expandir minhas habilidades em projetos desafiadores.</p>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="section projetos" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" data-i18n="projectsTitle">Projetos</h2>
+                <div class="projetos-grid">
+                    <!-- Projeto Cardápio RU -->
+                    <a href="projeto-ru.html" class="projeto-item card" data-case="ru-cardapio" aria-labelledby="project1-title">
+                        <img src="https://placehold.co/600x400/111111/eeeeee?text=Cardápio+RU" alt="Preview do projeto Cardápio RU" role="presentation">
+                        <div class="card-body">
+                            <h3 id="project1-title" data-i18n="projectRU_Title">Cardápio RU Interativo</h3>
+                            <p data-i18n="projectRU_Desc">Redesenhei a experiência de consulta ao cardápio do RU, transformando um fluxo confuso e layout poluído em um acesso rápido e visualização limpa das informações.</p>
+                        </div>
+                    </a>
+                    <!-- Projeto Mapa de Salas -->
+                    <a href="projeto-mapa.html" class="projeto-item card" data-case="mapa-salas" aria-labelledby="project2-title">
+                        <img src="https://placehold.co/600x400/eeeeee/111111?text=Mapa+de+Salas" alt="Preview do projeto Mapa de Salas" role="presentation">
+                        <div class="card-body">
+                            <h3 id="project2-title" data-i18n="projectMap_Title">Mapa de Salas Inteligente</h3>
+                            <p data-i18n="projectMap_Desc">Encontre salas vagas ou descubra onde está ocorrendo a aula X de forma rápida e centralizada.</p>
+                        </div>
+                    </a>
+                     <!-- Adicione mais projetos -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Programas/Ferramentas -->
+        <section id="programas" class="section programas" aria-labelledby="programs-heading">
+            <div class="container">
+                <h2 id="programs-heading" data-i18n="programsTitle">Ferramentas</h2>
+                <div class="ferramentas-grid">
+                    <!-- Figma -->
+                    <div class="ferramenta-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolFigma">Figma</span>
+                    </div>
+                    <!-- Photoshop -->
+                    <div class="ferramenta-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolPhotoshop">Photoshop</span>
+                    </div>
+                    <!-- Illustrator -->
+                    <div class="ferramenta-item">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/512px-Adobe_Illustrator_CC_icon.svg.png" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolIllustrator">Illustrator</span>
+                    </div>
+                    <!-- Cursor -->
+                    <div class="ferramenta-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolCursor">Cursor</span>
+                    </div>
+                    <!-- Javascript -->
+                     <div class="ferramenta-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolJS">Javascript</span>
+                    </div>
+                    <!-- Miro -->
+                    <div class="ferramenta-item">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpLaoQZYVuVfXCJsCJT8gy4A56XLwdCEVQdA&s" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolMiro">Miro</span>
+                    </div>
+                    <!-- Milanote -->
+                    <div class="ferramenta-item">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOUw49mAqJdf9ntJwTCvcQrz-DHt9ofBf-g&s" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolMilanote">Milanote</span>
+                    </div>
+                    <!-- Hotjar -->
+                    <div class="ferramenta-item">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bFokFT723dhAIqi7w6H1dBpxLQVmOcEuCg&s" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolHotjar">Hotjar</span>
+                    </div>
+                    <!-- Jira -->
+                     <div class="ferramenta-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png" alt="" role="presentation" loading="lazy">
+                        <span data-i18n="toolJira">Jira</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leituras com Progresso -->
+        <section id="livros" class="section leituras" aria-labelledby="readings-heading">
+            <div class="container">
+                <h2 id="readings-heading" data-i18n="readingsTitle">Minhas Leituras</h2>
+                <div class="leituras-grid">
+
+                    <!-- Card Livro 1 -->
+                    <div class="livro-card small-card">
+                        <img src="https://m.media-amazon.com/images/I/51i8-f+QMFL.jpg" alt="Capa do livro Não me Faça Pensar de Steve Krug" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book1Title">Não me Faça Pensar</h3>
+                            <p class="author" data-i18n="book1Author">Steve Krug</p>
+                            <p class="livro-quote" data-i18n="book1Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 2 -->
+                    <div class="livro-card small-card">
+                        <img src="https://m.media-amazon.com/images/I/51Rheu+G0zL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro O Design do Dia a Dia de Donald A. Norman" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book2Title">O Design do Dia a Dia</h3>
+                            <p class="author" data-i18n="book2Author">Donald A. Norman</p>
+                            <p class="livro-quote" data-i18n="book2Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 5 -->
+                    <div class="livro-card small-card">
+                        <img src="https://m.media-amazon.com/images/I/91uvoWVqhuL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro O Ato Criativo de Rick Rubin" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book5Title">O Ato Criativo</h3>
+                            <p class="author" data-i18n="book5Author">Rick Rubin</p>
+                            <p class="livro-quote" data-i18n="book5Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 6 -->
+                     <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/91K+MUAUyhL.jpg" alt="Capa do livro O Design como Storytelling de Ellen Lupton" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book6Title">O Design como Storytelling</h3>
+                            <p class="author" data-i18n="book6Author">Ellen Lupton</p>
+                            <p class="livro-quote" data-i18n="book6Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 7 -->
+                     <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/61YhnDlYsXL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro Leis da Psicologia Aplicada ao UX de Jon Yablonski" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book7Title">Leis da Psicologia Aplicada ao UX</h3>
+                            <p class="author" data-i18n="book7Author">Jon Yablonski</p>
+                            <p class="livro-quote" data-i18n="book7Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 9 -->
+                     <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/71ey17QwvmL._UF894,1000_QL80_.jpg" alt="Capa do livro Roube como um Artista de Austin Kleon" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book9Title">Roube como um Artista</h3>
+                            <p class="author" data-i18n="book9Author">Austin Kleon</p>
+                            <p class="livro-quote" data-i18n="book9Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 11 (Enviesados) -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/61+JpFKbXjL.jpg" alt="Capa do livro Enviesados de Rian Dutra" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book11Title">Enviesados</h3>
+                            <p class="author" data-i18n="book11Author">Rian Dutra</p>
+                            <p class="livro-quote" data-i18n="book11Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- LIVROS 50% -->
+
+                    <!-- Card Livro 3 -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/81UhvfLRyAL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro Sprint de Jake Knapp" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book3Title">Sprint</h3>
+                            <p class="author" data-i18n="book3Author">Jake Knapp</p>
+                            <p class="livro-quote" data-i18n="book3Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 4 -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/71pTjQGCFYL._UF894,1000_QL80_.jpg" alt="Capa do livro Fácil de Usar de Giles Colborne" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book4Title">Fácil de Usar</h3>
+                            <p class="author" data-i18n="book4Author">Giles Colborne</p>
+                            <p class="livro-quote" data-i18n="book4Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 8 -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/71KcBUA91KL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro Ultra-Aprendizado de Scott H. Young" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book8Title">Ultra-Aprendizado</h3>
+                            <p class="author" data-i18n="book8Author">Scott H. Young</p>
+                            <p class="livro-quote" data-i18n="book8Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 10 -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/6146ZXFDBpL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro Design para Quem Não é Designer de Robin Williams" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book10Title">Design para Quem Não é Designer</h3>
+                            <p class="author" data-i18n="book10Author">Robin Williams</p>
+                            <p class="livro-quote" data-i18n="book10Quote"></p>
+                        </div>
+                    </div>
+
+                    <!-- Card Livro 12 -->
+                    <div class="livro-card small-card">
+                         <img src="https://m.media-amazon.com/images/I/81JK6eRUJ4L.jpg" alt="Capa do livro Articulando Decisões de Design de Tom Greever" loading="lazy">
+                        <div class="livro-info">
+                            <h3 data-i18n="book12Title">Articulando Decisões de Design</h3>
+                            <p class="author" data-i18n="book12Author">Tom Greever</p>
+                            <p class="livro-quote" data-i18n="book12Quote"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main> <!-- Fim de #main-content -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> YDHC | Yuri de Castro. <span data-i18n="footerRights">Todos os direitos reservados.</span></p>
+             <p><a href="mailto:[seu-email@dominio.com]" data-i18n="footerContact">Entre em contato</a></p>
+        </div>
+    </footer>
+
+    <!-- REMOVER Modal de Estudo de Caso -->
+    <!--
+    <div id="caseModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn" aria-label="Fechar Modal">✕</button>
+            <div id="modalBody">
+                
+            </div>
+        </div>
+    </div>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
