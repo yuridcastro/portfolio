@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- O JS vai ajustar isso -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O Título pode ser ajustado via JS ou manualmente -->
+    <title>Estudo de Caso: Mapa de Salas | YDHC Portfólio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' font-family='Helvetica Neue, Helvetica, Arial, sans-serif' fill='%23111111'>YDHC</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">YDHC</div>
+            <nav class="nav" id="main-nav">
+                 <a href="index.html#about" data-i18n="navAbout">SOBRE</a>
+                 <a href="index.html#projetos" data-i18n="navProjects">PROJETOS</a>
+                <a href="index.html#posters" data-i18n="navPosters">PÔSTERES</a>
+                 <a href="index.html#livros" data-i18n="navReadings">LEITURAS</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="toggle-group">
+                 <button id="langToggle" class="lang-btn" aria-label="Mudar idioma">
+                    <img id="langFlag" src="" alt="" width="24" height="18">
+                    <span id="langLabel" class="lang-label"></span>
+                </button>
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar Tema" aria-pressed="false" title="Alternar Tema">
+                    <!-- Ícone será adicionado via CSS/JS -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="project-case-study">
+        <section class="section">
+            <div class="container">
+                <!-- Título Principal do Estudo de Caso -->
+                <h1 data-i18n="projectMap_Title">Mapa de Salas: Projeto Conceitual</h1>
+
+                <!-- Projeto Overview -->
+                <div class="project-overview">
+                    <p><strong data-i18n="projectMap_Overview">Projeto pessoal desenvolvido para resolver sobrecarga cognitiva causada pelo acesso fragmentado à informação de salas</strong></p>
+                    <p data-i18n="projectMap_OverviewText">O sistema de localização de salas da universidade estava fragmentado em documentos dispersos no Google Docs, criando um processo lento e cognitivamente desgastante. Desenvolvi uma solução conceitual que reorganiza essas informações de forma mais intuitiva e acessível.</p>
+                </div>
+
+                <!-- Meu Papel -->
+                <h2 data-i18n="myRole">Meu Papel</h2>
+                <p><strong data-i18n="myRoleMap">UX/UI Designer e Desenvolvedor</strong></p>
+                <p data-i18n="myRoleMapText">Responsável por todo o ciclo do projeto: identificação do problema pessoal, análise da experiência atual, arquitetura da informação, design de interface e prototipação. Apliquei metodologias de design centrado no usuário para criar uma solução conceitual mais eficiente.</p>
+
+                <div class="skills-showcase">
+                    <h3 data-i18n="skillsApplied">Competências Aplicadas:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 data-i18n="designSkills">🎨 UX Research & Design</h4>
+                            <ul>
+                                <li data-i18n="userInterviews">Análise da experiência atual e identificação de pain points</li>
+                                <li data-i18n="informationArchitecture">Arquitetura de informação e reorganização de dados</li>
+                                <li data-i18n="userJourneyMapping">Mapeamento do fluxo de busca por informações</li>
+                                <li data-i18n="usabilityTesting">Design de interface intuitiva</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="developmentSkills">⚡ Desenvolvimento & Prototipação</h4>
+                            <ul>
+                                <li data-i18n="performanceOptimization">Estruturação e normalização de dados</li>
+                                <li data-i18n="dataStructuring">Prototipação de interface mobile</li>
+                                <li data-i18n="responsiveDesign">Design responsivo mobile-first</li>
+                                <li data-i18n="accessibilityImplementation">Implementação de hierarquia visual clara</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-tools">
+                    <div class="ferramenta-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" alt="Figma" role="presentation" loading="lazy">
+                        <span data-i18n="toolFigma">Figma</span>
+                    </div>
+                    <div class="ferramenta-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s" alt="Cursor" role="presentation" loading="lazy">
+                        <span data-i18n="toolCursor">Cursor</span>
+                    </div>
+                </div>
+
+                <!-- Análise do Problema -->
+                <h2 data-i18n="challenge">O Problema Identificado</h2>
+                <p data-i18n="projectMap_ChallengeText">O acesso às informações de salas através de documentos fragmentados criava sobrecarga cognitiva desnecessária no meu dia a dia:</p>
+                
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <span class="problem-icon">📄</span>
+                        <div>
+                            <h4 data-i18n="fragmentedInformation">Informação Fragmentada</h4>
+                            <p data-i18n="fragmentedInformationText">Dados dispersos em múltiplos Google Docs sem padronização ou organização lógica</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🧠</span>
+                        <div>
+                            <h4 data-i18n="inefficientSearch">Sobrecarga Cognitiva</h4>
+                            <p data-i18n="inefficientSearchText">Processo manual de localização demandava esforço mental excessivo para uma tarefa simples</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">📱</span>
+                        <div>
+                            <h4 data-i18n="mobileAccessibility">Acesso Mobile Limitado</h4>
+                            <p data-i18n="mobileAccessibilityText">Documentos não otimizados para dispositivos móveis, dificultando consultas rápidas</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">⏰</span>
+                        <div>
+                            <h4 data-i18n="realTimeUpdates">Interface Inadequada</h4>
+                            <p data-i18n="realTimeUpdatesText">Formato de tabela em documento não otimizado para consulta rápida e escanamento visual</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Processo de Design -->
+                <h2 data-i18n="designProcess">Processo de Design</h2>
+                <p data-i18n="designProcessMapText">Apliquei metodologia de Design Thinking para transformar um problema pessoal em uma solução conceitual estruturada:</p>
+                
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3 data-i18n="empathizePhase">Identificar - Análise do Problema</h3>
+                            <p data-i18n="empathizePhaseText">Análise da minha própria experiência revelou que o processo de busca em Google Docs era cognitivamente desgastante e ineficiente para consultas rápidas.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3 data-i18n="definePhase">Definir - Arquitetura da Informação</h3>
+                            <p data-i18n="definePhaseText">Reestruturação dos dados das salas criando uma taxonomia lógica por andar e tipo, priorizando clareza visual sobre densidade de informação.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3 data-i18n="ideatePhase">Idealizar - Conceitos de Interface</h3>
+                            <p data-i18n="ideatePhaseText">Desenvolvimento de conceitos de interface focados em busca visual, hierarquia clara e redução de carga cognitiva.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3 data-i18n="prototypePhase">Prototipar - Interface Mobile</h3>
+                            <p data-i18n="prototypePhaseText">Criação de protótipo mobile-first com sistema de cores para status das salas e navegação simplificada.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3 data-i18n="testPhase">Refinar - Iteração do Design</h3>
+                            <p data-i18n="testPhaseText">Refinamento da interface baseado na própria experiência de uso e princípios de usabilidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem do App Mapa de Salas -->
+                <figure class="centered-figure">
+                    <img src="assets/img/mapadesalas.png" alt="Tabela de horários de salas no Google Docs." class="case-study-image">
+                    <figcaption data-i18n="mapaSalas_Figcaption">Situação original: Mapa de Salas no Google Docs</figcaption>
+                </figure>
+
+                <!-- A Solução -->
+                <h2 data-i18n="solution">A Solução Conceitual</h2>
+                <p data-i18n="projectMap_SolutionText">Desenvolvi um <strong>app simples e direto</strong> que centraliza as informações de salas em uma interface dedicada. A proposta é eliminar a fricção do Google Docs e permitir consulta rápida: abrir, filtrar, visualizar - e pronto.</p>
+
+                <div class="iterative-design">
+                    <h3 data-i18n="solutionFeatures">Fluxo Simples e Direto:</h3>
+                    
+                    <div class="improvements-list">
+                        <ol style="font-size: 1.1em; line-height: 1.6;">
+                            <li><strong data-i18n="visualSearch">Abrir o App:</strong> <span data-i18n="visualSearchText">Interface limpa e dedicada, sem distrações do Google Docs</span></li>
+                            <li><strong data-i18n="contextualFilters">Filtrar por Sala:</strong> <span data-i18n="contextualFiltersText">Lista organizada das salas disponíveis (Sala 1, 2, 3, 4, 5, P&D 1, 2, Lab 3)</span></li>
+                            <li><strong data-i18n="realTimeStatus">Visualizar Horários:</strong> <span data-i18n="realTimeStatusText">Status claro dos horários de cada sala - ocupada ou livre</span></li>
+                        </ol>
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--text-secondary);" data-i18n="andDoneQuote">
+                            <strong>E pronto!</strong> Sem navegação complexa, sem recursos desnecessários – apenas a informação que você precisa, quando precisa.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="image-comparison duo">
+                    <figure>
+                        <img src="assets/img/mapadesalasv1.jpeg" alt="Lista de salas no app" class="case-study-image">
+                        <figcaption><strong data-i18n="v1Interface">Tela Inicial - Lista de Salas</strong><br><span data-i18n="mapaSalas_FigcaptionV1">Ao abrir o app, você vê a lista das salas disponíveis</span></figcaption>
+                    </figure>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                    <figure>
+                        <img src="assets/img/mapadesalasv2.jpeg" alt="Horários de uma sala no app" class="case-study-image">
+                        <figcaption><strong data-i18n="v2Details">Ao Clicar - Horários da Sala</strong><br><span data-i18n="mapaSalas_FigcaptionV2">Tela que aparece quando você seleciona uma sala específica</span></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Comparação Conceitual -->
+                <div class="performance-metrics">
+                    <h3 data-i18n="performanceMetrics">🔄 Comparação Conceitual</h3>
+                    <p data-i18n="metricsMapDescription">Análise teórica da diferença entre o método atual e a solução proposta:</p>
+                    
+                    <div class="metrics-comparison">
+                        <div class="metric-card before">
+                            <div class="metric-header">
+                                <h4 data-i18n="beforeMethod">📄 Google Docs (Situação Atual)</h4>
+                                <span class="metric-status negative" data-i18n="inefficient">Problemático</span>
+                            </div>
+                            <div class="metric-breakdown">
+                                <div class="breakdown-item">
+                                    <span data-i18n="step1Map">• Navegar até documento específico</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step2Map">• Fazer zoom para ler tabela em mobile</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step3Map">• Escanear visualmente dados não otimizados</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step4Map">• Interpretar formato de tabela genérica</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vs-divider">
+                            <span data-i18n="versus">VS</span>
+                            <div class="improvement-arrow">
+                                <span data-i18n="improvementMap">Solução Conceitual</span>
+                            </div>
+                        </div>
+
+                        <div class="metric-card after">
+                            <div class="metric-header">
+                                <h4 data-i18n="afterApp">📱 Mapa de Salas (Proposta)</h4>
+                                <span class="metric-status positive" data-i18n="optimized">Otimizado</span>
+                            </div>
+                            <div class="metric-breakdown">
+                                <div class="breakdown-item">
+                                    <span data-i18n="step1MapApp">• Abrir o app diretamente</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step2MapApp">• Escolher sala na lista</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step3MapApp">• Ver horários organizados</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step4MapApp">• Pronto - informação encontrada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aprendizados e Reflexões -->
+                <h2 data-i18n="results">Aprendizados e Reflexões</h2>
+                <p data-i18n="projectMap_ResultsText">Este projeto conceitual demonstrou a importância de questionar interfaces existentes e buscar soluções mais adequadas para necessidades específicas:</p>
+                
+                <!-- Insights Estratégicos -->
+                <div class="strategic-insights">
+                    <h3 data-i18n="strategicInsights">💡 Insights do Projeto</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <h4 data-i18n="insight1TitleMap">Identificação de Pain Points Pessoais</h4>
+                            <p data-i18n="insight1TextMap">A experiência pessoal frustrante foi um catalisador válido para identificar um problema de UX real que merecia atenção.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight2TitleMap">Menos é Mais</h4>
+                            <p data-i18n="insight2TextMap">Um app com apenas 3 passos (abrir, filtrar, visualizar) pode ser mais eficiente que sistemas complexos - simplicidade bem executada resolve o problema real.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight3TitleMap">Design Mobile-First</h4>
+                            <p data-i18n="insight3TextMap">Pensar primeiro na experiência mobile forçou foco na essência da funcionalidade, eliminando elementos desnecessários.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight4TitleMap">Prototipação como Validação</h4>
+                            <p data-i18n="insight4TextMap">Mesmo sem implementação completa, o protótipo funcionou como prova de conceito das melhorias possíveis na experiência.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong data-i18n="keyLearnings">Principais Aprendizados:</strong> <span data-i18n="keyLearningsMapText">O projeto demonstrou que nem sempre é necessário aceitar interfaces inadequadas como "padrão". Aplicar princípios de UX mesmo em projetos conceituais ajuda a desenvolver pensamento crítico sobre experiências digitais.</span></p>
+
+                <hr style="margin: 3rem 0; border-top: 2px solid var(--border);">
+
+                <p><a href="index.html#projetos" data-i18n="backToProjects">&larr; Voltar aos Projetos</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> YDHC | Yuri de Castro. <span data-i18n="footerRights">Todos os direitos reservados.</span></p>
+             <p><a href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener noreferrer" data-i18n="footerContact">Entre em contato</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
