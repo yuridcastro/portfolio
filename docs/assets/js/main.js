@@ -1,4 +1,4 @@
-/* === REFACTORED JAVASCRIPT === */
+
 
 // === VARIÁVEIS GLOBAIS ===
 let currentTypingAnimation = null;
@@ -102,7 +102,7 @@ const translations = {
         projectsButton: 'Veja meus projetos',
         cardClickBadge: '👆 CLIQUE PARA VER',
         // Projetos - Case Studies
-        projectRU_Title: 'Cardápio RU: Redesign Completo',
+        projectRU_Title: 'Cardápio RU: Redesign',
         projectRU_Description: 'Transformação de um fluxo frustrante em uma experiência intuitiva que conquistou 20+ usuários ativos. Do mapeamento de problemas ao desenvolvimento final.',
         projectMap_Title: 'Mapa de Salas: Sistema Inteligente',
         projectMap_Description: 'Solução centralizada para localização de salas disponíveis na universidade. Interface clara que otimiza a vida acadêmica dos estudantes.',
