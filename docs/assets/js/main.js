@@ -1393,11 +1393,11 @@ function initPosterGallery() {
 
     const posterDescriptions = {
         'pt-BR': {
-            aves: 'Exploração visual sobre liberdade e movimento. Uma reflexão artística sobre a natureza alada e a busca por horizontes infinitos através do design digital.',
+            aves: 'Exploração visual sobre liberdade e movimento. Uma reflexão artística sobre a busca por horizontes infinitos.',
             caminhos: 'Composição visual sobre jornadas e direções. Design tipográfico que explora os diferentes percursos da vida e as escolhas que moldam nosso destino.',
-            ondeflor: 'Narrativa poética visual que combina natureza e design digital. Uma busca artística por beleza em lugares inesperados através da linguagem visual.',
-            empty: 'Investigação conceitual sobre vazio e espaço negativo. Peça minimalista que explora a filosofia do menos é mais no design contemporâneo.',
-            unlucky: 'Expressão emocional através do design gráfico. Narrativa visual que explora temas de sorte e acaso.'
+            ondeflor: 'Uma busca artística por beleza em lugares inesperados através da colagem manual e o design digital.',
+            empty: 'Peça conceitual sobre vazio e espaço negativo. Exploração da filosofia do menos é mais no design contemporâneo.',
+            unlucky: 'Expressão emocional através do design gráfico. Narrativa que subtrai conceito de sorte e azar utilizando elementos comuns com signos cotidianos como o gato preto'
         },
         'en': {
             aves: 'Visual exploration of freedom and movement. An artistic reflection on winged nature and the search for infinite horizons through digital design.',
