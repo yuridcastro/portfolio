@@ -45,7 +45,7 @@ const translations = {
     toolPhotoshop: 'Photoshop',
     toolIllustrator: 'Illustrator',
     toolCursor: 'Cursor',
-    toolJS: 'Javascript',
+    toolJS: 'Kotlin',
     toolMiro: 'Miro',
     toolMilanote: 'Milanote',
     toolHotjar: 'Hotjar',
