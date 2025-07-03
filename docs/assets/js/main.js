@@ -611,7 +611,7 @@ const translations = {
         poorVisualHierarchy: 'Poor Visual Hierarchy',
         poorVisualHierarchyText: 'Essential information visually competing with secondary elements',
         lowPerformance: 'Low Performance',
-        lowPerformanceText: 'High loading time impacting user experience',
+        lowPerformanceText: 'High loading time impacting user engagement',
         
         rotatingWords: [
             "Visual Thinker",
