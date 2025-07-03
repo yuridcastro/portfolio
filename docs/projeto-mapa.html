@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- O JS vai ajustar isso -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O Título pode ser ajustado via JS ou manualmente -->
+    <title>Mapa de Salas: Solução Prática | YDHC Portfólio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' font-family='Helvetica Neue, Helvetica, Arial, sans-serif' fill='%23111111'>YDHC</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Voltar ao início">YDHC</a>
+            <nav class="nav" id="main-nav">
+                 <a href="index.html#about" data-i18n="navAbout">SOBRE</a>
+                 <a href="index.html#projetos" data-i18n="navProjects">PROJETOS</a>
+                <a href="index.html#posters" data-i18n="navPosters">PÔSTERES</a>
+                 <a href="index.html#livros" data-i18n="navReadings">LEITURAS</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="toggle-group">
+                 <button id="langToggle" class="lang-btn" aria-label="Mudar idioma">
+                    <img id="langFlag" src="" alt="" width="24" height="18">
+                    <span id="langLabel" class="lang-label"></span>
+                </button>
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar Tema" aria-pressed="false" title="Alternar Tema">
+                    <!-- Ícone será adicionado via CSS/JS -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="project-case-study">
+        <section class="section">
+            <div class="container">
+                <!-- Título Principal -->
+                <h1 data-i18n="projectMap_Title">Mapa de Salas: Solução Prática</h1>
+
+                <!-- Projeto Overview -->
+                <div class="project-overview">
+                    <p><strong data-i18n="projectMap_Overview">Um app simples criado para facilitar a consulta de horários de salas na universidade</strong></p>
+                    <p data-i18n="projectMap_OverviewText">Cansei de ficar procurando horários de salas em documentos do Google Docs no celular. Era chato, demorado e não funcionava bem no mobile. Então criei um app básico que organiza essa informação de forma mais prática.</p>
+                </div>
+
+                <!-- O que foi feito -->
+                <h2 data-i18n="myRole">O que eu fiz</h2>
+                <p><strong data-i18n="myRoleMap">Designer e Desenvolvedor</strong></p>
+                <p data-i18n="myRoleMapText">Identifiquei um problema no meu dia a dia, pensei numa solução mais simples, criei a interface no Figma e desenvolvi um protótipo básico. Nada muito complexo - só uma forma mais eficiente de ver os horários das salas.</p>
+
+                <div class="skills-showcase">
+                    <h3 data-i18n="skillsApplied">Habilidades utilizadas:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 data-i18n="designSkills">🎨 Design de Interface</h4>
+                            <ul>
+                                <li data-i18n="userInterviews">Design mobile-first</li>
+                                <li data-i18n="informationArchitecture">Organização de informações</li>
+                                <li data-i18n="userJourneyMapping">Interface limpa e funcional</li>
+                                <li data-i18n="usabilityTesting">Hierarquia visual clara</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="developmentSkills">⚡ Desenvolvimento</h4>
+                            <ul>
+                                <li data-i18n="performanceOptimization">Estruturação de dados</li>
+                                <li data-i18n="dataStructuring">Prototipação rápida</li>
+                                <li data-i18n="responsiveDesign">Layout responsivo</li>
+                                <li data-i18n="accessibilityImplementation">Código limpo e simples</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-tools">
+                    <div class="ferramenta-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" alt="Figma" role="presentation" loading="lazy">
+                        <span data-i18n="toolFigma">Figma</span>
+                    </div>
+                    <div class="ferramenta-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s" alt="Cursor" role="presentation" loading="lazy">
+                        <span data-i18n="toolCursor">Cursor</span>
+                    </div>
+                </div>
+
+                <!-- O Problema -->
+                <h2 data-i18n="challenge">O problema</h2>
+                <p data-i18n="projectMap_ChallengeText">Era muito chato consultar horários de salas pelo Google Docs, especialmente no celular:</p>
+                
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <span class="problem-icon">📱</span>
+                        <div>
+                            <h4 data-i18n="fragmentedInformation">Mobile ruim</h4>
+                            <p data-i18n="fragmentedInformationText">Documento não otimizado para celular, precisava ficar dando zoom</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">⏰</span>
+                        <div>
+                            <h4 data-i18n="inefficientSearch">Demora para encontrar</h4>
+                            <p data-i18n="inefficientSearchText">Tabela genérica não facilitava encontrar informação rapidamente</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-icon">🧠</span>
+                        <div>
+                            <h4 data-i18n="mobileAccessibility">Incômodo</h4>
+                            <p data-i18n="mobileAccessibilityText">Para algo simples, o processo era mais complicado que deveria ser</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem da situação atual -->
+                <figure class="centered-figure">
+                    <img src="assets/img/mapadesalas.png" alt="Tabela de horários de salas no Google Docs." class="case-study-image">
+                    <figcaption data-i18n="mapaSalas_Figcaption">Como era antes: tabela no Google Docs</figcaption>
+                </figure>
+
+                <!-- A Solução -->
+                <h2 data-i18n="solution">A solução que criei</h2>
+                <p data-i18n="projectMap_SolutionText">Fiz um app bem simples que resolve exatamente o problema: <strong>abrir, escolher sala, ver horários</strong>. Sem complicação.</p>
+
+                <div class="iterative-design">
+                    <h3 data-i18n="solutionFeatures">Como funciona:</h3>
+                    
+                    <div class="improvements-list">
+                        <ol style="font-size: 1.1em; line-height: 1.6;">
+                            <li><strong data-i18n="visualSearch">Abrir o app:</strong> <span data-i18n="visualSearchText">Interface limpa, feita para mobile</span></li>
+                            <li><strong data-i18n="contextualFilters">Escolher a sala:</strong> <span data-i18n="contextualFiltersText">Lista clara das salas disponíveis</span></li>
+                            <li><strong data-i18n="realTimeStatus">Ver os horários:</strong> <span data-i18n="realTimeStatusText">Informação organizada de forma fácil de ler</span></li>
+                        </ol>
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--text-secondary);" data-i18n="andDoneQuote">
+                            <strong>Pronto!</strong> Bem mais rápido e menos irritante.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="image-comparison duo">
+                    <figure>
+                        <img src="assets/img/mapadesalasv1.jpeg" alt="Lista de salas no app" class="case-study-image">
+                        <figcaption><strong data-i18n="v1Interface">Tela inicial</strong><br><span data-i18n="mapaSalas_FigcaptionV1">Lista das salas disponíveis</span></figcaption>
+                    </figure>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                    <figure>
+                        <img src="assets/img/mapadesalasv2.jpeg" alt="Horários de uma sala no app" class="case-study-image">
+                        <figcaption><strong data-i18n="v2Details">Ao clicar na sala</strong><br><span data-i18n="mapaSalas_FigcaptionV2">Horários organizados e fáceis de ler</span></figcaption>
+                    </figure>
+                </div>
+
+                <!-- Comparação -->
+                <div class="performance-metrics">
+                    <h3 data-i18n="performanceMetrics">🔄 Antes vs Depois</h3>
+                    <p data-i18n="metricsMapDescription">A diferença na prática:</p>
+                    
+                    <div class="metrics-comparison">
+                        <div class="metric-card before">
+                            <div class="metric-header">
+                                <h4 data-i18n="beforeMethod">📄 Antes (Google Docs)</h4>
+                                <span class="metric-status negative" data-i18n="inefficient">Chato</span>
+                            </div>
+                            <div class="metric-breakdown">
+                                <div class="breakdown-item">
+                                    <span data-i18n="step1Map">• Abrir o Google Docs</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step2Map">• Dar zoom no celular</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step3Map">• Procurar na tabela</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step4Map">• Interpretar informação mal organizada</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vs-divider">
+                            <span data-i18n="versus">VS</span>
+                            <div class="improvement-arrow">
+                                <span data-i18n="improvementMap">Solução</span>
+                            </div>
+                        </div>
+
+                        <div class="metric-card after">
+                            <div class="metric-header">
+                                <h4 data-i18n="afterApp">📱 Depois (App)</h4>
+                                <span class="metric-status positive" data-i18n="optimized">Simples</span>
+                            </div>
+                            <div class="metric-breakdown">
+                                <div class="breakdown-item">
+                                    <span data-i18n="step1MapApp">• Abrir o app</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step2MapApp">• Escolher a sala</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step3MapApp">• Ver horários organizados</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span data-i18n="step4MapApp">• Pronto!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O que aprendi -->
+                <h2 data-i18n="results">O que aprendi fazendo isso</h2>
+                <p data-i18n="projectMap_ResultsText">Foi um projeto pequeno, mas me ensinou algumas coisas úteis sobre resolver problemas do dia a dia:</p>
+                
+                <div class="strategic-insights">
+                    <h3 data-i18n="strategicInsights">💡 Aprendizados</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <h4 data-i18n="insight1TitleMap">Simples funciona</h4>
+                            <p data-i18n="insight1TextMap">Às vezes a solução não precisa ser super complexa. Um app que faz uma coisa bem feita já resolve o problema.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight2TitleMap">Mobile-first é importante</h4>
+                            <p data-i18n="insight2TextMap">Pensar primeiro no celular me forçou a priorizar o essencial e eliminar o desnecessário.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight3TitleMap">Protótipo valida a ideia</h4>
+                            <p data-i18n="insight3TextMap">Mesmo sem desenvolver tudo, fazer o protótipo já mostrou que a ideia funcionava melhor que a situação atual.</p>
+                        </div>
+                        <div class="insight-card">
+                            <h4 data-i18n="insight4TitleMap">Vale a pena questionar</h4>
+                            <p data-i18n="insight4TextMap">Só porque todo mundo usa de um jeito não significa que é a melhor forma. Vale tentar melhorar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong data-i18n="keyLearnings">No final:</strong> <span data-i18n="keyLearningsMapText">Foi um projeto bem direto - identifiquei algo que me incomodava no dia a dia e criei uma solução mais prática. Nada revolucionário, mas funcional e útil.</span></p>
+
+                <hr style="margin: 3rem 0; border-top: 2px solid var(--border);">
+
+                <p><a href="index.html#projetos" data-i18n="backToProjects">&larr; Voltar aos Projetos</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> YDHC | Yuri de Castro. <span data-i18n="footerRights">Todos os direitos reservados.</span></p>
+             <p><a href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener noreferrer" data-i18n="footerContact">Entre em contato</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
