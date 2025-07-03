@@ -154,7 +154,7 @@ const translations = {
         mobileFirstDesign: 'Design de interface mobile-first',
         prototypingTesting: 'Prototipação interativa e testes de usabilidade',
         responsiveMobile: 'Design responsivo mobile-first',
-        mobileJavaScript: 'JavaScript para aplicações mobile',
+        mobileJavaScript: 'Kotlin para aplicações mobile',
         performanceOpt: 'Otimização de performance mobile',
         aiAssistance: 'Desenvolvimento assistido por IA (Cursor + Gemini)',
         
