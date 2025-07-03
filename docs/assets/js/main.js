@@ -407,7 +407,7 @@ const translations = {
         cardClickBadge: '👆 CLICK TO VIEW',
         // Projects - Case Studies
         projectRU_Title: 'Cardápio RU: Redesign',
-        projectRU_Description: 'Transformation of a frustrating flow into an intuitive experience that won over 20+ active users. From problem mapping to final development.',
+        projectRU_Description: 'A redesign that got over 20+ active users from what used to be a frustrating user flow, turning it into an intuitive experience. From problem mapping to final development.',
         projectMap_Title: 'Room Map: Intelligent System',
         projectMap_Description: 'Centralized solution for locating available rooms at the university. Clear interface that optimizes students\' academic life.',
         
