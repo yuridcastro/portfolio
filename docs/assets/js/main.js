@@ -408,7 +408,7 @@ const translations = {
         // Projects - Case Studies
         projectRU_Title: 'Cardápio RU: Redesign',
         projectRU_Description: 'A redesign that got over 20+ active users from what used to be a frustrating user flow, turning it into an intuitive experience. From problem mapping to final development.',
-        projectMap_Title: 'Room Map: Intelligent System',
+        projectMap_Title: 'Room Chart: Intelligent System',
         projectMap_Description: 'Centralized solution for locating available rooms at the university. Clear interface that optimizes students\' academic life.',
         
         // Poster Gallery
@@ -563,7 +563,7 @@ const translations = {
         keyLearningsText: 'The project validated the importance of prioritizing real user needs over technical complexity. Simple and well-executed solutions can generate significant organic adoption, even in personal projects.',
         
         // Map Project Captions
-        mapaSalas_Figcaption: 'Room Map in Google Docs',
+        mapaSalas_Figcaption: 'Room Chart in Google Docs',
         mapaSalas_FigcaptionV1: 'Available room list',
         mapaSalas_FigcaptionV2: 'Schedule and bookings',
         captionCurrentSite: 'Screenshot of the current UFC RU Menu website.',
