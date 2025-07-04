@@ -177,7 +177,7 @@ const translations = {
         performanceOptimization: 'Otimização de performance mobile',
         dataStructuring: 'Estruturação e normalização de dados',
         responsiveDesign: 'Design responsivo mobile-first',
-        accessibilityImplementation: 'Implementação de acessibilidade',
+    
         
         // Problem Analysis
         fragmentedInformation: 'Mobile ruim',
