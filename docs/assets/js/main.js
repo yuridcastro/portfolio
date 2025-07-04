@@ -105,7 +105,7 @@ const translations = {
         // Projetos - Case Studies
         projectRU_Title: 'Cardápio RU: Redesign',
         projectRU_Description: 'Redesign que conquistou 20+ usuários ativos solucionando uma experiência frustrante. Do mapeamento de problemas ao desenvolvimento final.',
-        projectMap_Title: 'Mapa de Salas Solução Prática',
+        projectMap_Title: 'Mapa de Salas',
         projectMap_Description: 'Um app simples criado para facilitar a consulta de horários de salas na universidade.',
         
         // Poster Gallery
