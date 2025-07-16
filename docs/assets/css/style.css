@@ -351,6 +351,19 @@ body {
     transition: color 0.2s ease;
 }
 
+/* Mobile: melhor quebra do texto rotativo */
+@media (max-width: 600px) {
+    #tagline {
+        text-align: center;
+    }
+    
+    #rotating-text {
+        display: block;
+        margin-top: 0.3rem;
+        font-size: 0.9em;
+    }
+}
+
 [data-theme="dark"] #rotating-text {
     color: var(--accent);
 }
@@ -1125,34 +1138,62 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: min(92%, 1100px);
+        padding: 0 1rem;
+    }
+    
+    .header {
+        padding: 0.8rem 0;
+    }
+    
     .header-container {
         flex-wrap: wrap;
+        gap: 0.8rem;
     }
     
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     
     .toggle-group {
         margin-left: auto;
+        gap: 0.8rem;
     }
     
     .section {
-        padding: 2.5rem 0;
+        padding: 2rem 0;
     }
     
     .section h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero {
+        min-height: 50vh;
+        padding: 2rem 0;
     }
     
     .hero-title {
-        font-size: clamp(1.2rem, 7vw, 2.2rem);
-        line-height: 1.15;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-align: center;
     }
     
     .tagline {
-        font-size: 0.95rem;
-        line-height: 1.25;
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        line-height: 1.4;
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Quebra melhor o texto rotativo */
+    #rotating-text {
+        display: block;
+        margin-top: 0.5rem;
     }
 
     .hobbies-list {
@@ -1166,6 +1207,41 @@ body {
         padding: 0.6rem 0.8rem;
         border-radius: 16px;
         min-height: auto;
+    }
+    
+    /* Menu mobile melhorado */
+    .nav {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .nav a {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    /* Melhor espaçamento geral */
+    .projetos-grid {
+        gap: 1.2rem;
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+    
+    .card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .lang-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .theme-btn {
+        width: 36px;
+        height: 36px;
     }
     
     .footer {
@@ -1212,6 +1288,42 @@ body {
     
     .poster-info p {
         font-size: 1rem;
+    }
+}
+
+/* Dispositivos muito pequenos */
+@media (max-width: 360px) {
+    .container {
+        width: min(95%, 1100px);
+        padding: 0 0.8rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 9vw, 2.2rem);
+    }
+    
+    .tagline {
+        font-size: clamp(0.8rem, 4.5vw, 1rem);
+    }
+    
+    .about-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+    }
+    
+    .story-card {
+        padding: 0.8rem;
+    }
+    
+    .story-title {
+        font-size: 0.8rem;
+    }
+    
+    .story-desc {
+        font-size: 0.7rem;
     }
 }
 
@@ -2708,37 +2820,60 @@ body {
   /* About section mobile pequeno */
   .about-layout {
     gap: 1.5rem;
+    padding: 0 0.5rem;
   }
   
   .photo-container {
-    width: 220px;
-    height: 280px;
+    width: 200px;
+    height: 250px;
   }
   
   .about-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   
   .about-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .story-cards {
+    gap: 0.8rem;
+    margin: 1.5rem 0;
   }
   
   .story-card {
-    padding: 0.8rem;
-    gap: 0.8rem;
+    padding: 0.9rem;
+    gap: 0.7rem;
+    flex-direction: row;
+    align-items: flex-start;
   }
   
   .story-icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+  
+  .story-content {
+    flex: 1;
   }
   
   .story-title {
     font-size: 0.85rem;
+    margin-bottom: 0.2rem;
   }
   
   .story-desc {
     font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .cta-btn.whatsapp {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
   }
 }
 
@@ -2895,25 +3030,40 @@ body {
     .about-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
-        text-align: center;
+        text-align: left;
     }
     
     .photo-container {
-        width: 260px;
-        height: 320px;
+        width: 240px;
+        height: 300px;
         order: -1;
+        margin: 0 auto;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
     }
     
     .story-cards {
-        gap: 0.8rem;
+        gap: 1rem;
+        margin: 2rem 0;
     }
     
     .story-card {
         padding: 1rem;
+        gap: 0.8rem;
     }
     
     .story-icon {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     
     .story-title {
@@ -2921,10 +3071,12 @@ body {
     }
     
     .story-desc {
-        font-size: 0.8rem;
+        font-size: 0.82rem;
+        line-height: 1.3;
     }
     
-    .about-content h2 {
-        font-size: 1.8rem;
+    .cta-container {
+        text-align: center;
+        margin-top: 1.5rem;
     }
 }
