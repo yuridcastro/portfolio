@@ -1472,11 +1472,11 @@ function initPosterGallery() {
 
     const posterDescriptions = {
         'pt-BR': {
-            aves: 'Exploração visual sobre liberdade e movimento. Uma reflexão artística sobre a busca por horizontes infinitos.',
-            caminhos: 'Composição visual sobre jornadas e direções. Design que explora os diferentes percursos da vida e as escolhas que moldam nosso destino.',
-            ondeflor: 'Uma busca artística por beleza através da colagem manual e o design digital.',
-            empty: 'Peça sobre vazio e espaço negativo. Exploração da filosofia do menos é mais no design contemporâneo através da música Empty.',
-            unlucky: 'Expressão emocional através do design gráfico. Narrativa que subtrai conceito de sorte e azar utilizando elementos comuns com signos cotidianos como o gato preto'
+            aves: 'Uma reflexão artística sobre a busca por horizontes infinitos.',
+            caminhos: 'Sobre os percursos da vida e as escolhas que moldam nosso destino.',
+            ondeflor: 'Uma busca por beleza através da colagem manual e o design digital.',
+            empty: 'Peça sobre vazio e espaço negativo através da música Empty.',
+            unlucky: 'Peça conceitual sobre a mística do azar atribuído aos gatos pretos'
         },
         'en': {
             aves: 'Visual exploration of freedom and movement. An artistic reflection on winged nature and the search for infinite horizons through digital design.',
