@@ -35,16 +35,9 @@ const translations = {
     navReadings: 'LEITURAS',
         tagline: 'Designer de Experiência do Usuário, Estudante de Sistemas e Mídias Digitais & ',
     aboutTitle: 'Sobre Mim',
-        aboutGreeting: 'Oi, eu sou o Yuri! 👋',
-        aboutIntro: 'Designer apaixonado por entender como as pessoas interagem com tecnologia. Formado em UX pela Uninassau e estudante de Sistemas e Mídias Digitais na UFC.',
-        storyGamer: 'Gamer desde criança',
-        storyGamerDesc: 'Aprendi na prática como interfaces mal feitas podem arruinar uma experiência inteira',
-        storyObserver: 'Observador compulsivo',
-        storyObserverDesc: 'Analiso cada app que uso e sempre penso "Como é que isso poderia ser melhor?"',
-        storyCurious: 'Apaixonado por Psicologia',
-        storyCuriousDesc: 'Entender o "porquê" das escolhas humanas me ajuda a criar soluções que engajam e convertem',
-        aboutBio: 'Sou um UX Designer formado pela Uninassau e atualmente estudante de Sistemas e Mídias Digitais na UFC. Tenho interesse em psicologia do usuário e em como ajustes de experiência podem refletir em métricas de negócio tangíveis, como tempo de tarefa e taxa de cliques. Como profissional iniciante meu portfólio inclui projetos acadêmicos e pessoais baseados em testes e pequenos experimentos que fiz ao longo do primeiro semestre do curso de SMD.'
-        aboutConclusion: 'No tempo livre, escrevo no Medium, desenho pôsteres, jogo uns joguinhos e sou o maior fã de Junji Ito do Brasil.\n\nAdoro aprender com projetos reais e transformar insights em melhorias medíveis. Se você busca um designer focado em entender pessoas e gerar valor de negócio, vamos trocar uma ideia?',
+        aboutBio: 'Sou um UX Designer formado pela Uninassau e atualmente estudante de Sistemas e Mídias Digitais na UFC. Tenho interesse em psicologia do usuário e em como ajustes de experiência podem refletir em métricas de negócio tangíveis, como tempo de tarefa e taxa de cliques. Como profissional iniciante, construo meu portfólio através de projetos acadêmicos e pessoais baseados em testes e pequenos experimentos.',
+        aboutDescription: 'Acredito que boas experiências nascem a partir das experiências na vida real. Minha curiosidade por histórias, jogos e comportamento humano alimenta diretamente meu trabalho como designer. Quando não estou criando interfaces, você pode me encontrar:',
+        aboutConclusion: 'Adoro aprender com projetos reais e transformar insights em melhorias medibles. Se você busca um designer focado em entender pessoas e gerar valor de negócio, vamos trocar uma ideia.',
     projectsTitle: 'Projetos',
     postersTitle: 'Pôsteres',
         readingsTitle: 'Minhas Leituras',
@@ -104,7 +97,7 @@ const translations = {
         hobby7: '🏓 praticandoa tênis de mesa',
         highlight1: '🎯 Especialidades: UI Design, Pesquisa UX, Prototipagem',
         highlight2: '📊 Psicologia do usuário e métricas de negócio',
-        ctaWhatsapp: '💬 Bora conversar?',
+        ctaWhatsapp: '💬 Falar no WhatsApp',
     
         contactButton: 'Entre em Contato',
         projectsButton: 'Veja meus projetos',
@@ -346,17 +339,9 @@ const translations = {
     navReadings: 'READINGS',
         tagline: 'User Experience Designer, Digital Systems and Media Student & ',
     aboutTitle: 'About Me',
-        aboutGreeting: 'Hi, I\'m Yuri! 👋',
-        aboutIntro: 'Designer passionate about understanding how people interact with technology. Graduated in UX from Uninassau and currently studying Digital Systems and Media at UFC.',
-        storyGamer: 'Gamer since childhood',
-        storyGamerDesc: 'I learned firsthand how poorly designed interfaces can ruin an entire experience',
-        storyObserver: 'Compulsive observer',
-        storyObserverDesc: 'I analyze every app I use - and always think "how could this be better?"',
-        storyCurious: 'Curious about behavior',
-        storyCuriousDesc: 'Understanding the "why" of human actions helps me create solutions that actually work',
         aboutBio: "I'm a UX Designer, graduated from Uninassau and currently studying Digital Systems and Media at UFC. I'm interested in user psychology and how experience tweaks can impact tangible business metrics such as task time and click-through rate. As an early professional, I build my portfolio through academic and personal projects based on tests and small experiments.",
         aboutDescription: "I believe great experiences come from observing real life. My curiosity for stories, games, and human behavior directly fuels my work as a designer. When I'm not creating interfaces, you can find me:",
-        aboutConclusion: 'In my free time, I write on Medium, design posters, play some games, and I\'m Brazil\'s biggest Junji Ito fan.\n\nI love learning from real projects and turning insights into measurable improvements. If you\'re looking for a designer focused on understanding people and generating business value, let\'s chat.',
+        aboutConclusion: "I love learning from real projects and turning insights into measurable improvements. If you're looking for a designer focused on understanding people and generating business value, let's chat.",
     projectsTitle: 'Projects',
     postersTitle: 'Posters',
         readingsTitle: 'My Readings',
@@ -419,7 +404,7 @@ const translations = {
         hobby9: '🎨 finding art everywhere',
         highlight1: '🎯 Skills: UI Design, UX Research, Prototyping',
         highlight2: '📊 User psychology & business metrics',
-        ctaWhatsapp: '💬 Let\'s chat?',
+        ctaWhatsapp: '💬 Chat on WhatsApp',
         contactButton: 'Contact Me',
         projectsButton: 'See my projects',
         cardClickBadge: '👆 CLICK TO VIEW',
@@ -665,17 +650,9 @@ const translations = {
     navReadings: 'LECTURAS',
         tagline: 'Diseñador de Experiencia de Usuario, Estudiante de Sistemas y Medios Digitales & ',
     aboutTitle: 'Sobre Mí',
-        aboutGreeting: '¡Hola, soy Yuri! 👋',
-        aboutIntro: 'Diseñador apasionado por entender cómo las personas interactúan con la tecnología. Graduado en UX en Uninassau y actualmente estudiante de Sistemas y Medios Digitales en la UFC.',
-        storyGamer: 'Gamer desde la infancia',
-        storyGamerDesc: 'Aprendí en la práctica cómo las interfaces mal diseñadas pueden arruinar toda una experiencia',
-        storyObserver: 'Observador compulsivo',
-        storyObserverDesc: 'Analizo cada app que uso - y siempre pienso "¿cómo podría ser mejor?"',
-        storyCurious: 'Curioso sobre el comportamiento',
-        storyCuriousDesc: 'Entender el "por qué" de las acciones humanas me ayuda a crear soluciones que realmente funcionan',
         aboutBio: 'Soy un Diseñador UX graduado en Uninassau y actualmente estudiante de Sistemas y Medios Digitales en la UFC. Me interesa la psicología del usuario y cómo los ajustes de experiencia pueden reflejarse en métricas de negocio tangibles, como el tiempo de tarea y la tasa de clics. Como profesional principiante, construyo mi portafolio mediante proyectos académicos y personales basados en pruebas y pequeños experimentos.',
         aboutDescription: 'Creo que las grandes experiencias nacen de observar la vida real. Mi curiosidad por las historias, juegos y comportamiento humano alimenta directamente mi trabajo como diseñador. Cuando no estoy creando interfaces, puedes encontrarme:',
-        aboutConclusion: 'En mi tiempo libre, escribo en Medium, diseño pósteres, juego algunos juegos y soy el mayor fan de Junji Ito de Brasil.\n\nMe encanta aprender con proyectos reales y convertir los insights en mejoras medibles. Si buscas un diseñador enfocado en entender a las personas y generar valor para el negocio, conversemos.',
+        aboutConclusion: 'Me encanta aprender con proyectos reales y convertir los insights en mejoras medibles. Si buscas un diseñador enfocado en entender a las personas y generar valor para el negocio, conversemos.',
     projectsTitle: 'Proyectos',
     postersTitle: 'Pósteres',
         readingsTitle: 'Mis Lecturas',
@@ -725,10 +702,19 @@ const translations = {
         book12Author: 'Tom Greever',
         book12Quote: "\"Comunicar el 'por qué' de tu diseño es tan importante como el diseño en sí.\"",
             footerRights: 'Todos los derechos reservados.',
-        footerContact: 'Ponte en contacto' 
+        footerContact: 'Ponte en contacto',
+        hobby1: '🎮 jugando games online',
+        hobby2: '📖 leyendo manga y literatura',
+        hobby3: '🌳 relajándome en parques',
+        hobby4: '🖼️ visitando museos',
+        hobby5: '🧠 estudiando psicología',
+        hobby6: '🎵 explorando música',
+        hobby7: '🏓 jugando tenis de mesa',
+        hobby8: '📚 devorando buenos libros',
+        hobby9: '🎨 descubriendo arte en todo',
         highlight1: '🎯 Especialidades: Diseño de UI, Investigación UX, Prototipado',
         highlight2: '📊 Psicología del usuario y métricas de negocio',
-        ctaWhatsapp: '💬 ¿Hablamos?',
+        ctaWhatsapp: '💬 Hablar en WhatsApp',
         contactButton: 'Entre en Contacto',
         projectsButton: 'Ver mis proyectos',
         cardClickBadge: '👆 CLIC PARA VER',
@@ -1000,8 +986,8 @@ function initTypewriterEffect() {
     
     if (!taglineEl || !rotatingEl) return;
     
-    let taglineText = translations[currentLang]?.tagline || translations['pt-BR'].tagline;
-    let rotatingWords = translations[currentLang]?.rotatingWords || translations['pt-BR'].rotatingWords;
+    const taglineText = translations[currentLang]?.tagline || translations['pt-BR'].tagline;
+    const rotatingWords = translations[currentLang]?.rotatingWords || translations['pt-BR'].rotatingWords;
     
     let currentWordIndex = 0;
     let currentChar = 0;
@@ -1026,22 +1012,22 @@ function initTypewriterEffect() {
         } else if (window.scrollY <= scrollThreshold && typewriterStopped) {
             // Reiniciar typewriter quando voltar para o topo
             typewriterStopped = false;
+            isTypewriting = false;
             
-            // Remover o listener atual para evitar duplicatas
-            window.removeEventListener('scroll', handleScroll);
+            // Reiniciar a animação do início
+            currentChar = 0;
+            isTaglineComplete = false;
+            isDeleting = false;
+            currentWordIndex = 0;
             
-            // Reinicializar completamente a animação com o idioma atual
-            initTypewriterEffect();
+            // Limpar textos
+            taglineEl.textContent = '';
+            rotatingEl.textContent = '';
+            
+            // Reiniciar typewriter
+            currentTypingAnimation = setTimeout(typeWriter, 100);
         }
     }
-    
-    // Remover listener anterior se existir
-    if (window.typewriterScrollHandler) {
-        window.removeEventListener('scroll', window.typewriterScrollHandler);
-    }
-    
-    // Adicionar novo listener e guardar referência
-    window.typewriterScrollHandler = handleScroll;
     window.addEventListener('scroll', handleScroll);
     
     function typeWriter() {
@@ -1472,11 +1458,11 @@ function initPosterGallery() {
 
     const posterDescriptions = {
         'pt-BR': {
-            aves: 'Uma reflexão artística sobre a busca por horizontes infinitos.',
-            caminhos: 'Sobre os percursos da vida e as escolhas que moldam nosso destino.',
-            ondeflor: 'Uma busca por beleza através da colagem manual e o design digital.',
-            empty: 'Peça sobre vazio e espaço negativo através da música Empty.',
-            unlucky: 'Peça conceitual sobre a mística do azar atribuído aos gatos pretos'
+            aves: 'Exploração visual sobre liberdade e movimento. Uma reflexão artística sobre a busca por horizontes infinitos.',
+            caminhos: 'Composição visual sobre jornadas e direções. Design que explora os diferentes percursos da vida e as escolhas que moldam nosso destino.',
+            ondeflor: 'Uma busca artística por beleza através da colagem manual e o design digital.',
+            empty: 'Peça sobre vazio e espaço negativo. Exploração da filosofia do menos é mais no design contemporâneo através da música Empty.',
+            unlucky: 'Expressão emocional através do design gráfico. Narrativa que subtrai conceito de sorte e azar utilizando elementos comuns com signos cotidianos como o gato preto'
         },
         'en': {
             aves: 'Visual exploration of freedom and movement. An artistic reflection on winged nature and the search for infinite horizons through digital design.',
