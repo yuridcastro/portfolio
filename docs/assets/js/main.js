@@ -113,7 +113,7 @@ const translations = {
         // Projetos - Case Studies
         projectRU_Title: 'Cardápio RU: Redesign',
         projectRU_Description: 'Redesign que conquistou 20+ usuários ativos solucionando uma experiência frustrante. Do mapeamento de problemas ao desenvolvimento final.',
-        projectMap_Title: 'Mapa de Salas Solução Prática',
+        projectMap_Title: 'Mapa de Salas',
         projectMap_Description: 'Um app simples criado para facilitar a consulta de horários de salas na universidade.',
         
         // Poster Gallery
@@ -177,7 +177,7 @@ const translations = {
         // Map Project Content
         projectMap_Overview: 'Um app simples criado para facilitar a consulta de horários de salas na universidade',
         projectMap_OverviewText: 'Cansei de ficar procurando horários de salas em documentos do Google Docs no celular. Era chato, demorado e não funcionava bem no mobile. Então criei um app básico que organiza essa informação de forma mais prática.',
-        myRoleMapText: 'Identifiquei um problema no meu dia a dia, pensei numa solução mais simples, criei a interface no Figma e desenvolvi um protótipo básico. Nada muito complexo - só uma forma mais eficiente de ver os horários das salas.',
+        myRoleMapText: 'Identifiquei um problema no meu dia a dia, pensei numa solução mais simples, criei a interface no Figma e desenvolvi um protótipo básico. Nada muito complexo, eu só queria uma forma mais eficiente de ver os horários das salas.',
         
         // UX Skills
         userJourneyMapping: 'Mapeamento de jornada do usuário',
@@ -427,7 +427,7 @@ const translations = {
         // Projects - Case Studies
         projectRU_Title: 'Cardápio RU: Redesign',
         projectRU_Description: 'A redesign that got over 20+ active users from what used to be a frustrating user flow, turning it into an intuitive experience. From problem mapping to final development.',
-        projectMap_Title: 'Room Chart: Practical Solution',
+        projectMap_Title: 'Room Chart',
         projectMap_Description: 'A simple app created to make it easier to check university room schedules.',
         
         // Poster Gallery
