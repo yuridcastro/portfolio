@@ -116,21 +116,21 @@ const translations = {
         projectMap_Title: 'Mapa de Salas',
         projectMap_Description: 'Um app simples criado para facilitar a consulta de horários de salas na universidade.',
         
-        // Poster Gallery
+        // Poster 
         posterAves: 'Aves',
         posterCaminhos: 'Caminhos',
         posterOndeFlor: 'Onde Flor',
         posterEmpty: 'Vazio',
         posterUnlucky: 'Azar',
         
-        // Poster Badges
+        // Poster
         posterBadgeAves: 'Ver',
         posterBadgeCaminhos: 'Ver',
         posterBadgeOndeFlor: 'Ver',
         posterBadgeEmpty: 'Ver',
         posterBadgeUnlucky: 'Ver',
         
-        // Case Study Content
+        // Cases
         myRole: 'MEU PAPEL',
         myRoleRU: 'UX/UI Designer e Desenvolvedor Mobile',
         myRoleMap: 'Designer e Desenvolvedor',
@@ -139,7 +139,7 @@ const translations = {
         results: 'RESULTADOS E IMPACTO',
         backToProjects: '← Voltar aos Projetos',
         
-        // New Translations for Enhanced Content
+
         skillsApplied: 'Competências Aplicadas:',
         designSkills: '🎨 Design',
         developmentSkills: '⚡ Desenvolvimento Mobile',
@@ -156,7 +156,7 @@ const translations = {
         microInteractions: 'Microinterações: Feedback visual para ações do usuário (favoritar, dar swipe pros lados)',
         accessibility: 'Acessibilidade: Melhoria no contraste e tamanhos de fonte para melhor legibilidade',
         
-        // Skills Lists
+        // Skills
         userResearchSkill: 'Pesquisa de usuário e análise de comportamento',
         informationArchitecture: 'Arquitetura de informação e wireframing',
         mobileFirstDesign: 'Design de interface mobile-first',
@@ -166,7 +166,7 @@ const translations = {
         performanceOpt: 'Otimização de performance mobile',
         aiAssistance: 'Desenvolvimento assistido por IA (Cursor + Gemini)',
         
-        // RU Project Content
+        // RU 
         projectRU_Overview: 'Transformação completa de um sistema frustrante em uma experiência mobile intuitiva com 20+ usuários ativos',
         projectRU_OverviewText: 'O site oficial do Restaurante Universitário da UFC apresentava sérios problemas de usabilidade e arquitetura da informação. Desenvolvi uma solução mobile-first que otimiza o acesso às informações e melhora significativamente a experiência do usuário.',
         myRoleRUText: 'Responsável por todo o ciclo do projeto: pesquisa do usuário, análise de problemas, arquitetura da informação, prototipação, design de interface mobile e desenvolvimento técnico. Também conduzi testes de usabilidade informais e coletei feedback contínuo dos usuários.',
@@ -174,7 +174,7 @@ const translations = {
         projectRU_SolutionText: 'Desenvolvi um aplicativo móvel leve e responsivo seguindo uma abordagem iterativa de design. O processo envolveu duas versões principais, cada uma com objetivos específicos de melhoria da experiência do usuário.',
         projectRU_ResultsText: 'A solução desenvolvida demonstrou validação orgânica através da adoção espontânea pelos usuários:',
         
-        // Map Project Content
+        // Mapa
         projectMap_Overview: 'Um app simples criado para facilitar a consulta de horários de salas na universidade',
         projectMap_OverviewText: 'Cansei de ficar procurando horários de salas em documentos do Google Docs no celular. Era chato, demorado e não funcionava bem no mobile. Então criei um app básico que organiza essa informação de forma mais prática.',
         myRoleMapText: 'Identifiquei um problema no meu dia a dia, pensei numa solução mais simples, criei a interface no Figma e desenvolvi um protótipo básico. Nada muito complexo, eu só queria uma forma mais eficiente de ver os horários das salas.',
@@ -187,7 +187,7 @@ const translations = {
         responsiveDesign: 'Design responsivo mobile-first',
         accessibilityImplementation: 'Implementação de acessibilidade',
         
-        // Problem Analysis
+        // Análise de Problemas
         fragmentedInformation: 'Mobile ruim',
         fragmentedInformationText: 'Documento não otimizado para celular, precisava ficar dando zoom',
         inefficientSearch: 'Demora para encontrar',
@@ -208,7 +208,7 @@ const translations = {
         testPhase: 'Refinar - Iteração do Design',
         testPhaseText: 'Refinamento da interface baseado na própria experiência de uso e princípios de usabilidade.',
         
-        // Solution Features
+        // Features
         solutionFeatures: 'Fluxo Simples e Direto:',
         visualSearch: 'Abrir o App:',
         visualSearchText: 'Interface limpa e dedicada, sem distrações do Google Docs',
@@ -219,11 +219,11 @@ const translations = {
         mobileOptimization: 'Otimização Mobile',
         mobileOptimizationText: 'Interface responsiva otimizada para consulta rápida em movimento',
         
-        // Interface Labels
+        // Labels
         v1Interface: 'Tela Inicial',
         v2Details: 'Detalhes da Sala',
         
-        // Performance Metrics
+        // Métricas
         metricsMapDescription: 'A diferença na prática:',
         beforeMethod: '📄 Antes (Google Docs)',
         step1Map: '• Abrir o Google Docs',
@@ -240,11 +240,11 @@ const translations = {
         yearlyTimeSavedMap: 'economizadas/ano*',
         impactNoteMap: '*Baseado em 12 estudantes fazendo 2 consultas/semana',
         
-        // Testimonial
+        // Testemunhos
         testimonialMap: '"Finalmente posso encontrar salas rapidamente! Antes eu perdia muito tempo procurando em vários documentos. Agora é só abrir o app e pronto."',
         testimonialAuthorMap: '— Maria Santos, estudante de Arquitetura',
         
-        // Strategic Insights
+        // Insights
         insight1TitleMap: 'Simples funciona',
         insight1TextMap: 'Às vezes a solução não precisa ser super complexa. Um app que faz uma coisa bem feita já resolve o problema.',
         insight2TitleMap: 'Mobile-first é importante',
@@ -259,7 +259,7 @@ const translations = {
         projectMap_SolutionText: 'Fiz um app bem simples que resolve exatamente o problema: abrir, escolher sala, ver horários. Sem complicação.',
         projectMap_ResultsText: 'Foi um projeto pequeno, mas me ensinou algumas coisas úteis sobre resolver problemas do dia a dia:',
         
-        // Strategic Insights
+        // Insights²
         strategicInsights: '💡 Insights Estratégicos',
         insight1Title: 'Product-Market Fit Orgânico',
         insight1Text: '20+ usuários solicitaram acesso espontaneamente, validando necessidade real do mercado sem investimento em marketing.',
@@ -272,13 +272,13 @@ const translations = {
         keyLearnings: 'Principais Aprendizados:',
         keyLearningsText: 'O projeto validou a importância de priorizar necessidades reais dos usuários sobre complexidade técnica. Soluções simples e bem executadas podem gerar adoção orgânica significativa, mesmo em projetos pessoais.',
         
-        // Map Project Captions
+        // Legendas
         mapaSalas_Figcaption: 'Como era antes: tabela no Google Docs',
         mapaSalas_FigcaptionV1: 'Lista das salas disponíveis',
         mapaSalas_FigcaptionV2: 'Horários organizados e fáceis de ler',
         captionCurrentSite: 'Screenshot do atual site do Cardário RU da UFC.',
         
-        // Performance Metrics
+        // Métricas
         performanceMetrics: '📊 Métricas de Performance',
         metricsDescription: 'Comparação temporal entre o site oficial da UFC e minha solução otimizada:',
         beforeSite: '🌐 Site UFC',
@@ -1280,7 +1280,6 @@ function setLanguage(lang) {
         }
     });
 
-    // (Removida reinicialização do typewriter)
 }
 
 // === INICIALIZAÇÃO ===
@@ -1343,7 +1342,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('🎯 Inicializando funções...');
 
-    // (Typewriter não utilizado)
 
     // Depois inicializar GSAP
     initAnimations();
@@ -1384,7 +1382,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// === AWWWARDS POSTER GALLERY ===
+// === POSTER GALLERY ===
 function initPosterGallery() {
     console.log('🖼️ [DEBUG] Iniciando poster gallery...');
 
