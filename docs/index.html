@@ -27,145 +27,304 @@
     </header>
 
     <main>
-        <section class="hero" id="sobre">
-            <div class="container hero-grid">
-                <div>
-                    <p class="hero-eyebrow">Designer</p>
-                    <h1 class="hero-title">Yuri de Castro</h1>
-                    <p class="hero-text">Sou estudante de Sistemas e Mídias Digitais e apaixonado por Design, seja ele qual for.</p>
-                    <div class="hero-actions">
-                        <a href="#contato" class="btn primary">Falar comigo</a>
-                        <a href="#cases" class="btn secondary">Ver cases</a>
+        <!-- Hero Section -->
+        <section class="hero-section" id="sobre">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text-block">
+                        <span class="section-label">Designer</span>
+                        <h1 class="hero-title">Yuri de Castro</h1>
+                        <p class="hero-description">Sou estudante de Sistemas e Mídias Digitais e apaixonado por Design, seja ele qual for.</p>
+                        <div class="hero-actions">
+                            <a href="#contato" class="btn-primary">Falar comigo</a>
+                            <a href="#cases" class="btn-secondary">Ver cases</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/img/profile.png" alt="Foto de perfil de Yuri de Castro">
                     </div>
                 </div>
-                <div class="image-placeholder profile">
-                    <img src="assets/img/profile.png" alt="Foto de perfil de Yuri de Castro">
-                </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container about-grid">
-                <div class="about-text">
-                    <h2 class="section-title">Sobre</h2>
-                    <p>Estou buscando minha primeira oportunidade na área. Tenho estudado e praticado identidade visual, UI e prototipagem, com conhecimento vasto em UX e metodologias ágeis.</p>
-                
-                </div>
-            </div>
-        </section>
-
-
-        <section class="section" id="cases">
+        <!-- About Section -->
+        <section class="about-section">
             <div class="container">
-                <h2 class="section-title">Case em destaque</h2>
-                <p class="section-subtitle">Projeto de branding que fiz no curso de Sistemas e Mídias Digitais.</p>
+                <div class="about-content">
+                    <div class="about-header">
+                        <span class="section-label">Background</span>
+                        <h2 class="section-title-large">Sobre</h2>
+                    </div>
+                    <div class="about-text">
+                        <p class="about-description">Estou buscando minha primeira oportunidade na área. Tenho estudado e praticado identidade visual, UI e prototipagem, com conhecimento vasto em UX e metodologias ágeis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases Section -->
+        <section class="cases-section" id="cases">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-text">
+                        <span class="section-label">Trabalhos</span>
+                        <h2 class="section-title-large">Case em destaque</h2>
+                    </div>
+                </div>
                 <div class="cases-grid">
-                    <a class="case-card" href="projeto-cinema.html" aria-label="Abrir case Trabalho no Cinema">
-                        <div class="image-placeholder case">
+                    <a class="case-card-new" href="projeto-cinema.html">
+                        <div class="case-image">
                             <img src="assets/img/case-cinema.png" alt="Aplicações da marca Trabalho no Cinema">
                         </div>
-                        <span class="case-meta">Branding</span>
-                        <h3 class="case-title">Trabalho no Cinema</h3>
-                        <p>Elaborei a identidade visual a partir de referências de cinema e fui construindo a paleta, a tipografia e as aplicações finais, bem como a apresentação final para os professores.</p>
-                        <span class="case-link">Ver case →</span>
+                        <div class="case-content">
+                            <span class="case-tag">Branding</span>
+                            <h3 class="case-title-new">Trabalho no Cinema</h3>
+                            <p class="case-description">Elaborei a identidade visual a partir de referências de cinema e fui construindo a paleta, a tipografia e as aplicações finais.</p>
+                            <span class="case-cta">Ver case →</span>
+                        </div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="posteres">
+        <!-- Posters Section -->
+        <section class="posters-section" id="posteres">
             <div class="container">
-                <h2 class="section-title">Pôsteres</h2>
-                <p>Clique neles para ampliar =D</p>
-                <div class="posters-grid">
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/imensurablelove.png" aria-label="Abrir pôster Imensurable Love">
-                            <img src="assets/img/posteres/imensurablelove.png" alt="Pôster Imensurable Love">
-                        </button>
-                        <h3>Imensurable Love</h3>
-                       
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/carryyourcross.png" aria-label="Abrir pôster Carry Your Cross">
-                            <img src="assets/img/posteres/carryyourcross.png" alt="Pôster Carry Your Cross">
-                        </button>
-                        <h3>Carry Your Cross</h3>
-                        
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/benotafraid2.png" aria-label="Abrir pôster Be Not Afraid">
-                            <img src="assets/img/posteres/benotafraid2.png" alt="Pôster Be Not Afraid">
-                        </button>
-                        <h3>Be Not Afraid</h3>
-                        
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/inaction.png" aria-label="Abrir pôster Inaction">
-                            <img src="assets/img/posteres/inaction.png" alt="Pôster Inaction">
-                        </button>
-                        <h3>Inaction</h3>
-                      
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/ondeflor2.png" aria-label="Abrir pôster Onde Flor">
-                            <img src="assets/img/posteres/ondeflor2.png" alt="Pôster Onde Flor">
-                        </button>
-                        <h3>Onde Flor</h3>
-                    
-                        
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/unlucky.png" aria-label="Abrir pôster Unlucky">
-                            <img src="assets/img/posteres/unlucky.png" alt="Pôster Unlucky">
-                        </button>
-                        <h3>Unlucky</h3>
-                        
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/salom%C3%A3o.png" aria-label="Abrir pôster Salomão">
-                            <img src="assets/img/posteres/salom%C3%A3o.png" alt="Pôster Salomão">
-                        </button>
-                        <h3>Salomão</h3>
-                   
-                    </article>
-                    <article class="poster-card">
-                        <button class="poster-button" type="button" data-poster="assets/img/posteres/ser%20gentil.png" aria-label="Abrir pôster Ser Gentil">
-                            <img src="assets/img/posteres/ser%20gentil.png" alt="Pôster Ser Gentil">
-                        </button>
-                        <h3>Ser Gentil</h3>
-                    
-                  
-                    </article>
+                <div class="posters-header">
+                    <div class="posters-title-group">
+                        <span class="section-label">Trabalhos</span>
+                        <h2 class="section-title-large">Pôsteres</h2>
+                    </div>
+                    <div class="posters-nav">
+                        <div class="posters-counter">
+                            <span class="counter-current" id="counterCurrent">01</span>
+                            <span class="counter-separator">/</span>
+                            <span class="counter-total" id="counterTotal">08</span>
+                        </div>
+                        <div class="posters-controls">
+                            <button class="carousel-btn carousel-prev" type="button" aria-label="Anterior">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                            </button>
+                            <button class="carousel-btn carousel-next" type="button" aria-label="Próximo">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="posters-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="posters-carousel" id="postersCarousel">
+                    <div class="posters-track" id="postersTrack">
+                        <article class="poster-card" data-index="1">
+                            <span class="poster-number">01</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/imensurablelove.png" aria-label="Abrir pôster Imensurable Love">
+                                <img src="assets/img/posteres/imensurablelove.png" alt="Pôster Imensurable Love">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Imensurable Love</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="2">
+                            <span class="poster-number">02</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/carryyourcross.png" aria-label="Abrir pôster Carry Your Cross">
+                                <img src="assets/img/posteres/carryyourcross.png" alt="Pôster Carry Your Cross">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Carry Your Cross</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="3">
+                            <span class="poster-number">03</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/benotafraid2.png" aria-label="Abrir pôster Be Not Afraid">
+                                <img src="assets/img/posteres/benotafraid2.png" alt="Pôster Be Not Afraid">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Be Not Afraid</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="4">
+                            <span class="poster-number">04</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/inaction.png" aria-label="Abrir pôster Inaction">
+                                <img src="assets/img/posteres/inaction.png" alt="Pôster Inaction">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Inaction</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="5">
+                            <span class="poster-number">05</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/ondeflor2.png" aria-label="Abrir pôster Onde Flor">
+                                <img src="assets/img/posteres/ondeflor2.png" alt="Pôster Onde Flor">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Onde Flor</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="6">
+                            <span class="poster-number">06</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/unlucky.png" aria-label="Abrir pôster Unlucky">
+                                <img src="assets/img/posteres/unlucky.png" alt="Pôster Unlucky">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Unlucky</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="7">
+                            <span class="poster-number">07</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/salom%C3%A3o.png" aria-label="Abrir pôster Salomão">
+                                <img src="assets/img/posteres/salom%C3%A3o.png" alt="Pôster Salomão">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Salomão</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="8">
+                            <span class="poster-number">08</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/ser%20gentil.png" aria-label="Abrir pôster Ser Gentil">
+                                <img src="assets/img/posteres/ser%20gentil.png" alt="Pôster Ser Gentil">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Ser Gentil</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="9">
+                            <span class="poster-number">09</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/chaos.png" aria-label="Abrir pôster Chaos">
+                                <img src="assets/img/posteres/chaos.png" alt="Pôster Chaos">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Chaos</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="10">
+                            <span class="poster-number">10</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/frieren.png" aria-label="Abrir pôster You Are Finite">
+                                <img src="assets/img/posteres/frieren.png" alt="Pôster You Are Finite">
+                            </button>
+                            <div class="poster-info">
+                                <h3>You Are Finite</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="11">
+                            <span class="poster-number">11</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/dmc.png" aria-label="Abrir pôster Devil May Cry">
+                                <img src="assets/img/posteres/dmc.png" alt="Pôster Devil May Cry">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Devil May Cry</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="12">
+                            <span class="poster-number">12</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/y2k.png" aria-label="Abrir pôster Y2K">
+                                <img src="assets/img/posteres/y2k.png" alt="Pôster Y2K">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Y2K</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="13">
+                            <span class="poster-number">13</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/eva01.png" aria-label="Abrir pôster EVA-01">
+                                <img src="assets/img/posteres/eva01.png" alt="Pôster EVA-01">
+                            </button>
+                            <div class="poster-info">
+                                <h3>EVA-01</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="14">
+                            <span class="poster-number">14</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/steampunk.png" aria-label="Abrir pôster Steampunk">
+                                <img src="assets/img/posteres/steampunk.png" alt="Pôster Steampunk">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Steampunk</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="15">
+                            <span class="poster-number">15</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/cyberpunk.png" aria-label="Abrir pôster Cyberpunk">
+                                <img src="assets/img/posteres/cyberpunk.png" alt="Pôster Cyberpunk">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Cyberpunk</h3>
+                            </div>
+                        </article>
+                        <article class="poster-card" data-index="16">
+                            <span class="poster-number">16</span>
+                            <button class="poster-button" type="button" data-poster="assets/img/posteres/veritatem.png" aria-label="Abrir pôster Veritatem">
+                                <img src="assets/img/posteres/veritatem.png" alt="Pôster Veritatem">
+                            </button>
+                            <div class="poster-info">
+                                <h3>Veritatem</h3>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Poster Modal -->
         <div class="poster-modal" id="posterModal" aria-hidden="true" role="dialog" aria-label="Visualização do pôster">
             <div class="poster-modal-backdrop" data-close="true"></div>
+            <button class="poster-modal-nav poster-modal-prev" type="button" aria-label="Pôster anterior">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
             <div class="poster-modal-content" role="document">
                 <button class="poster-modal-close" type="button" data-close="true" aria-label="Fechar pôster">✕</button>
                 <img id="posterModalImage" src="" alt="">
+                <div class="poster-modal-counter" id="posterModalCounter"></div>
             </div>
+            <button class="poster-modal-nav poster-modal-next" type="button" aria-label="Próximo pôster">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
 
-        <section class="section" id="contato">
-            <div class="container contact-card">
-                <h2 class="section-title">Contato</h2>
-                <p>Estou aberto a projetos e colaborações em Design Gráfico, Produtos Digitais e UX/UI. </p>
-                <p>Vamos conversar?</p>
-
-                <div class="contact-links">
-                    <a href="mailto:yuridcastro@alu.ufc.br">yuridcastro@alu.ufc.br</a>
-                    <a href="https://wa.me/5585999836630" target="_blank" rel="noopener">WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contato">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <span class="section-label">Vamos conversar?</span>
+                        <h2 class="section-title-large">Contato</h2>
+                        <p class="contact-description">Estou aberto a projetos e colaborações em Design Gráfico, Produtos Digitais e UX/UI.</p>
+                    </div>
+                    <div class="contact-links-grid">
+                        <a href="mailto:yuridcastro@alu.ufc.br" class="contact-link">
+                            <span class="contact-link-label">Email</span>
+                            <span class="contact-link-value">yuridcastro@alu.ufc.br</span>
+                        </a>
+                        <a href="https://wa.me/5585999836630" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-label">WhatsApp</span>
+                            <span class="contact-link-value">+55 85 99983-6630</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-label">LinkedIn</span>
+                            <span class="contact-link-value">/yuridcastro</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer-new">
         <div class="container">
-            <p>&copy; <span id="year"></span> YDHC | Yuri de Castro. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <span class="footer-logo">YDHC</span>
+                <p class="footer-text">&copy; <span id="year"></span> Yuri de Castro. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
