@@ -142,36 +142,8 @@ body{background:linear-gradient(115deg,#f1f1f1,#d5d5d5 44%,#ececec 72%,#c9c9c9);
 
 /* =========================================================
    Ajustes de celular
-   No toque a tela do projeto vale mais que a moldura em volta
-   dela, então a moldura sai e a captura ocupa a largura toda.
    ========================================================= */
 @media (max-width: 700px) {
-
-  /* Mockups: captura sangrando, sem moldura, sem inclinação, sem flutuar. */
-  .device-stage,
-  .device-stage--phone,
-  .device-stage--laptop,
-  .case-device .device-stage--phone,
-  .case-device .device-stage--laptop { min-height: 0; padding: 0 }
-  .device-shadow { display: none }
-  .floating-device { animation: none; filter: none; transform: none }
-  .phone-mockup,
-  .laptop-mockup,
-  .case-device .phone-mockup { width: 100%; aspect-ratio: auto }
-  .phone-mockup__frame,
-  .phone-mockup__island,
-  .laptop-mockup__frame { display: none }
-  .phone-mockup__screen,
-  .laptop-mockup__screen {
-    position: static; width: 100%; height: auto;
-    padding-top: 0; border-radius: 4px; overflow: hidden;
-    border: 1px solid var(--line-soft);
-  }
-  .phone-mockup__screen > img,
-  .laptop-mockup__screen > img { width: 100%; height: auto; object-fit: contain }
-  .project .device-stage { margin-bottom: 18px }
-  .case-device figcaption { margin-top: 12px; text-align: left }
-
   /* Hero: retrato inteiro em cima do nome, e a linha de função sem quebrar feio. */
   .hero { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px }
   .hero__portrait { grid-column: 1; grid-row: 1; padding: 0 }
@@ -202,16 +174,8 @@ body{background:linear-gradient(115deg,#f1f1f1,#d5d5d5 44%,#ececec 72%,#c9c9c9);
   .case-story .story-image + p { margin-top: 40px }
 }
 
-/* A captura inteira do celular fica com quase 800px de altura no cartão da
-   home, então na listagem ela é cortada e a página do projeto mostra tudo. */
-@media (max-width: 700px) {
-  .project .phone-mockup__screen { max-height: 58vh }
-  .project .phone-mockup__screen > img { height: 58vh; object-fit: cover; object-position: top }
-}
-
-
 /* Float around a fixed floor. Translation and shadow share the same phase. */
-@media(min-width:701px){
+@media all{
  .device-stage{--breath-cycle:6.8s;--breath-offset:0s;--breath-rise:-10px;animation:none;transform:none}
  .device-stage--laptop{--breath-cycle:8.2s;--breath-offset:-2s;--breath-rise:-7px}
  .floating-device{--lean-x:0deg;--lean-y:0deg;--lean-scale:1;
@@ -236,5 +200,14 @@ body{background:linear-gradient(115deg,#f1f1f1,#d5d5d5 44%,#ececec 72%,#c9c9c9);
 @media(prefers-reduced-motion:reduce){
  .device-stage,.floating-device,.device-shadow{animation:none!important}
  .floating-device{transform:rotateZ(var(--device-angle))!important}
+}
+.opening[data-renderer="css-3d"] .opening-model{filter:drop-shadow(0 22px 22px #06101b99)}
+@media(pointer:coarse){
+ .keyboard-open{left:50%!important;bottom:22px!important;clip-path:none;width:auto;height:auto;min-height:48px;padding:12px 20px;overflow:visible;transform:translateX(-50%)!important;background:linear-gradient(120deg,#f7f9fb,#c7d0d8);color:#182635;border:1px solid #eef4f8;border-radius:999px;box-shadow:0 8px 24px #07111d70}
+}
+@media(max-width:700px){
+ .opening-model{width:min(72vw,49vh,310px);top:48%}
+ .device-stage{--breath-rise:-6px}
+ .device-stage--laptop{--breath-rise:-4px}
 }
 .opening[data-renderer=webgl2]:before{display:none}
