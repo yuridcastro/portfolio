@@ -1,0 +1,56 @@
+/* Shared silver finish, derived from the home page's chrome cards. */
+:root{
+  --metal-surface:var(--chrome-surface);
+  --metal-panel:linear-gradient(120deg,#f7f8f9 0%,#dfe2e5 25%,#f3f4f5 49%,#d2d6da 78%,#e9ecef 100%);
+  --metal-header:linear-gradient(110deg,#e0e4e8,#f4f6f7 43%,#bfc6cd);
+  --metal-border:#aeb5bc;
+  --metal-divider:#bfc5cb;
+  --metal-ink:#202a35;
+  --metal-muted:#485562;
+  --metal-shadow:inset 0 0 0 4px #ffffff60,0 18px 32px -26px #17212d80;
+}
+.case-page,.case-page--biomat{--case-accent:#344b64;--case-tint:#e2e5e9}
+/* Panels share the same edge and reflection rather than project-specific tints. */
+.screen-pair,.benchmark-board>article,.biomat-needs article,.biomat-flow,
+.biomat-delivery,.biomat-conclusion,.biomat-table-wrap,.journey-scroll{
+  background:var(--metal-panel);border:1px solid var(--metal-border);
+  border-radius:5px;box-shadow:var(--metal-shadow);color:var(--metal-ink);
+}
+.benchmark-board>article,.benchmark-board>article:nth-child(2),.benchmark-board>article:nth-child(3),.biomat-needs article{
+  border-top:3px solid #7d8996;
+}
+.benchmark-top>span,.benchmark-focus,.benchmark-board h4,.journey-step,
+.journey-matrix tbody th,.biomat-needs article>span,.biomat-needs b,.biomat-tag,
+.biomat-evidence figcaption,.case-page--biomat .biomat-conclusion .biomat-credits{
+  color:var(--metal-muted);
+}
+.benchmark-learning,.biomat-pair article,.case-page--biomat .biomat-conclusion .biomat-credits{
+  border-color:var(--metal-divider);
+}
+/* Quiet row tones keep dense comparisons readable across the silver surface. */
+.journey-matrix,.biomat-table{background:transparent;color:var(--metal-ink)}
+.journey-matrix caption,.biomat-table caption{
+  background:linear-gradient(100deg,#edf0f2,#dbe0e5);color:var(--metal-muted);
+  box-shadow:inset 0 1px #fff;
+}
+.journey-matrix thead,.biomat-table thead{background:var(--metal-header);color:var(--metal-ink)}
+.journey-matrix th,.journey-matrix td,.biomat-table th,.biomat-table td{border-color:var(--metal-divider)}
+.journey-row-2{background:#ffffff48}.journey-row-3{background:#bec8d233}
+.journey-matrix tr>:first-child{width:150px;white-space:nowrap}
+.flow-start,.flow-branches>div{
+  background:var(--metal-surface);border-color:var(--metal-border);
+  box-shadow:inset 0 1px #fff,0 6px 16px -12px #17212d80;
+}
+.flow-branches:before,.flow-start:after,.flow-branches>div:before{background:#7d8996}
+.biomat-evidence img{border-color:var(--metal-border);box-shadow:0 10px 28px #17212d18}
+.biomat-evolution>div:not(:last-child) .biomat-evidence a{background:var(--metal-panel)}
+.biomat-primary{background:linear-gradient(120deg,#35485c,#202c3a);color:#fff;border:1px solid #182432;box-shadow:inset 0 1px #ffffff30}
+.biomat-primary:hover{background:linear-gradient(120deg,#435c76,#293e55)}
+.biomat-primary:focus-visible{outline-color:var(--foil)}
+/* Legacy project image surrounds use the same silver as current mockup panels. */
+.project--coletai .project__image,.project--biomat .project__image,
+.coletai-spread,.biomat-spread{background:var(--metal-surface);color:var(--metal-ink)}
+/* Research graphics retain their phase structure with slate and silver inks. */
+.diamond-graphic [fill="#176345"]{fill:#344b64}
+.diamond-graphic [fill="#d0e6db"]{fill:#d6dde4}
+.diamond-graphic [stroke="#176345"]{stroke:#344b64}
