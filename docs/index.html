@@ -1,333 +1,334 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YDHC | Designer </title>
-    <meta name="description" content="Portfólio de UX/UI Designer com foco em processos claros e entregas consistentes.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='50' font-weight='bold' font-family='Helvetica Neue, Helvetica, Arial, sans-serif' fill='%23111111'>YDHC</text></svg>">
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuri de Castro | Designer de produto</title>
+<meta name="description" content="Portfólio de Yuri de Castro: projetos de UX/UI, design de produto e um acervo de experimentos visuais. Fortaleza, Ceará.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yuri de Castro | designer de produto e interfaces">
+<meta property="og:description" content="Projetos de UX/UI, design de produto e um acervo de experimentos visuais.">
+<meta property="og:image" content="./assets/img/projects/coletai-home.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%2315161a'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-family='Helvetica,Arial' font-weight='800' font-size='27' letter-spacing='-2' fill='%23e6e6e3'%3EYDHC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./assets/css/site.css">
+<link rel="preload" as="image" href="./assets/img/collection/pack-print.webp" media="(min-width: 860px) and (pointer: fine)">
+<link rel="preload" as="image" href="./assets/img/collection/stage-dramatic.webp" media="(min-width: 860px) and (pointer: fine)">
+<script>
+  
+  (function () {
+    var d = document.documentElement;
+    var cabe = matchMedia('(min-width: 860px) and (pointer: fine)').matches;
+    var quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var lenta = navigator.connection && (navigator.connection.saveData ||
+                /2g/.test(navigator.connection.effectiveType || ''));
+    window.YDHC_ABERTURA = cabe && !quieto && !lenta && !location.hash;
+    if (window.YDHC_ABERTURA) {
+      d.classList.add('pre-abertura');
+      setTimeout(function () { d.classList.remove('pre-abertura'); }, 5000);
+    }
+  })();
+</script>
+<link rel="stylesheet" href="./assets/css/metal-surfaces.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo" aria-label="Voltar ao início">YDHC</a>
-            <nav class="nav" id="main-nav">
-                <a href="#sobre">Sobre</a>
-                <a href="#cases">Cases</a>
-                <a href="#posteres">Pôsteres</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<a class="skip" href="#projetos">Ir para os projetos</a>
+
+<section class="opening" aria-labelledby="abertura-titulo" hidden>
+  <canvas class="opening__canvas" aria-hidden="true" hidden></canvas>
+  <div class="opening-model" aria-hidden="true">
+    <div class="opening-model__back"><img src="./assets/img/collection/pack-print.webp" alt=""></div>
+    <div class="opening-model__mouth"></div>
+    <div class="opening-model__body"><img src="./assets/img/collection/pack-print.webp" alt="" width="1024" height="1536"></div>
+    <div class="opening-model__strip"><img src="./assets/img/collection/pack-print.webp" alt="" width="1024" height="1536"></div>
+  </div>
+  <div class="opening-radiance" aria-hidden="true"></div>
+  <div class="opening-card" aria-hidden="true"><span>YDHC / 01</span><img src="./assets/img/profile.png" alt=""><strong>Yuri de Castro</strong><small>UX/UI Designer</small></div>
+  <div class="opening-card" aria-hidden="true"><span>YDHC / 02</span><img src="./assets/img/projects/coletai-home.webp" alt=""><strong>Projetos</strong><small>Coletaí · BIOMAT · Cinema</small></div>
+  <div class="opening-card" aria-hidden="true"><span>YDHC / 03</span><img src="./assets/img/thumb/imensurable-love.webp" alt=""><strong>Pôsteres</strong><small>16 trabalhos</small></div>
+  <div class="opening__top"><span class="wordmark">YDHC</span><button id="pular" type="button">Ir direto aos projetos</button></div>
+  <h1 class="sr-only" id="abertura-titulo">Abra o portfólio de Yuri de Castro</h1>
+  <button class="pack-open keyboard-open" id="abrir-pack" type="button" aria-label="Abrir pacote pelo teclado"><span class="pack-open__label">Abrir pacote</span></button>
+  <span class="seal-hint" aria-hidden="true">arraste <span>→</span></span>
+  <span class="seal-cursor" aria-hidden="true"></span>
+</section>
+
+<div id="site">
+
+<header class="header">
+  <div class="shell header__inner">
+    <a class="wordmark" href="#inicio" aria-label="YDHC, início">YDHC</a>
+    <nav aria-label="Seções">
+      <a href="#projetos" data-nav>Projetos</a>
+      <a href="#sobre" data-nav data-optional>Sobre</a>
+      <a href="#acervo" data-nav>Pôsteres</a>
+      <a href="#contato" data-nav>Contato</a>
+    </nav>
+  </div>
+  <span class="progress" aria-hidden="true"></span>
+</header>
+
+<main id="inicio" tabindex="-1">
+
+  <section class="hero shell" id="sobre" aria-labelledby="meu-nome" tabindex="-1">
+    <div class="hero__identity">
+      <span class="hero__role">UX/UI Designer · Fortaleza, CE</span>
+      <h1 id="meu-nome">Yuri<br>de Castro</h1>
+      <div class="hero__links"><a class="link" href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="link" href="#contato">Contato</a></div>
+    </div>
+    <figure class="hero__portrait"><img src="./assets/img/profile.png" alt="Yuri de Castro, de óculos e camiseta preta, ao ar livre." width="500" height="500"></figure>
+    <div class="hero__bio">
+      <p>Estudo Sistemas e Mídias Digitais na UFC e sou formado em UX pela UNINASSAU.</p>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section class="band shell" id="projetos" tabindex="-1">
+    <div class="head">
+      
+      <h2 class="head__title">Projetos</h2>
+      <span class="head__aside">UX/UI & comunicação visual</span>
+
+    </div>
+
+    <div class="work">
+      <a class="project project--coletai" href="./projeto-coletai.html">
+        <div class="device-stage device-stage--phone">
+          <div class="device-shadow" aria-hidden="true"></div>
+          <div class="phone-mockup floating-device">
+            <img class="phone-mockup__frame" src="./assets/img/projects/phone-frame.webp" alt="" width="858" height="1832">
+            <div class="phone-mockup__screen"><img src="./assets/img/projects/coletai-home.webp" alt="Aplicativo Coletaí em um iPhone: estações próximas, coleção e recompensas." width="402" height="874" loading="eager"></div>
+            <img class="phone-mockup__island" src="./assets/img/projects/phone-frame.webp" alt="" width="858" height="1832">
+          </div>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section" id="sobre">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text-block">
-                        <span class="section-label">Designer</span>
-                        <h1 class="hero-title">Yuri de Castro</h1>
-                        <p class="hero-description">Sou estudante de Sistemas e Mídias Digitais e apaixonado por Design, seja ele qual for.</p>
-                        <div class="hero-actions">
-                            <a href="#contato" class="btn-primary">Falar comigo</a>
-                            <a href="#cases" class="btn-secondary">Ver cases</a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="assets/img/profile.png" alt="Foto de perfil de Yuri de Castro">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-header">
-                        <span class="section-label">Background</span>
-                        <h2 class="section-title-large">Sobre</h2>
-                    </div>
-                    <div class="about-text">
-                        <p class="about-description">Estou buscando minha primeira oportunidade na área. Tenho estudado e praticado identidade visual, UI e prototipagem, com conhecimento vasto em UX e metodologias ágeis.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cases Section -->
-        <section class="cases-section" id="cases">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-header-text">
-                        <span class="section-label">Trabalhos</span>
-                        <h2 class="section-title-large">Case em destaque</h2>
-                    </div>
-                </div>
-                <div class="cases-grid">
-                    <a class="case-card-new" href="projeto-cinema.html">
-                        <div class="case-image">
-                            <img src="assets/img/case-cinema.png" alt="Aplicações da marca Trabalho no Cinema">
-                        </div>
-                        <div class="case-content">
-                            <span class="case-tag">Branding</span>
-                            <h3 class="case-title-new">Trabalho no Cinema</h3>
-                            <p class="case-description">Elaborei a identidade visual a partir de referências de cinema e fui construindo a paleta, a tipografia e as aplicações finais.</p>
-                            <span class="case-cta">Ver case →</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Posters Section -->
-        <section class="posters-section" id="posteres">
-            <div class="container">
-                <div class="posters-header">
-                    <div class="posters-title-group">
-                        <span class="section-label">Trabalhos</span>
-                        <h2 class="section-title-large">Pôsteres</h2>
-                    </div>
-                    <div class="posters-nav">
-                        <div class="posters-counter">
-                            <span class="counter-current" id="counterCurrent">01</span>
-                            <span class="counter-separator">/</span>
-                            <span class="counter-total" id="counterTotal">08</span>
-                        </div>
-                        <div class="posters-controls">
-                            <button class="carousel-btn carousel-prev" type="button" aria-label="Anterior">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                                    <polyline points="12 19 5 12 12 5"></polyline>
-                                </svg>
-                            </button>
-                            <button class="carousel-btn carousel-next" type="button" aria-label="Próximo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="posters-progress">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-                <div class="posters-carousel" id="postersCarousel">
-                    <div class="posters-track" id="postersTrack">
-                        <article class="poster-card" data-index="1">
-                            <span class="poster-number">01</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/imensurablelove.png" aria-label="Abrir pôster Imensurable Love">
-                                <img src="assets/img/posteres/imensurablelove.png" alt="Pôster Imensurable Love">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Imensurable Love</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="2">
-                            <span class="poster-number">02</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/carryyourcross.png" aria-label="Abrir pôster Carry Your Cross">
-                                <img src="assets/img/posteres/carryyourcross.png" alt="Pôster Carry Your Cross">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Carry Your Cross</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="3">
-                            <span class="poster-number">03</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/benotafraid2.png" aria-label="Abrir pôster Be Not Afraid">
-                                <img src="assets/img/posteres/benotafraid2.png" alt="Pôster Be Not Afraid">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Be Not Afraid</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="4">
-                            <span class="poster-number">04</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/inaction.png" aria-label="Abrir pôster Inaction">
-                                <img src="assets/img/posteres/inaction.png" alt="Pôster Inaction">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Inaction</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="5">
-                            <span class="poster-number">05</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/ondeflor2.png" aria-label="Abrir pôster Onde Flor">
-                                <img src="assets/img/posteres/ondeflor2.png" alt="Pôster Onde Flor">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Onde Flor</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="6">
-                            <span class="poster-number">06</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/unlucky.png" aria-label="Abrir pôster Unlucky">
-                                <img src="assets/img/posteres/unlucky.png" alt="Pôster Unlucky">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Unlucky</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="7">
-                            <span class="poster-number">07</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/salom%C3%A3o.png" aria-label="Abrir pôster Salomão">
-                                <img src="assets/img/posteres/salom%C3%A3o.png" alt="Pôster Salomão">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Salomão</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="8">
-                            <span class="poster-number">08</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/ser%20gentil.png" aria-label="Abrir pôster Ser Gentil">
-                                <img src="assets/img/posteres/ser%20gentil.png" alt="Pôster Ser Gentil">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Ser Gentil</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="9">
-                            <span class="poster-number">09</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/chaos.png" aria-label="Abrir pôster Chaos">
-                                <img src="assets/img/posteres/chaos.png" alt="Pôster Chaos">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Chaos</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="10">
-                            <span class="poster-number">10</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/frieren.png" aria-label="Abrir pôster You Are Finite">
-                                <img src="assets/img/posteres/frieren.png" alt="Pôster You Are Finite">
-                            </button>
-                            <div class="poster-info">
-                                <h3>You Are Finite</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="11">
-                            <span class="poster-number">11</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/dmc.png" aria-label="Abrir pôster Devil May Cry">
-                                <img src="assets/img/posteres/dmc.png" alt="Pôster Devil May Cry">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Devil May Cry</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="12">
-                            <span class="poster-number">12</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/y2k.png" aria-label="Abrir pôster Y2K">
-                                <img src="assets/img/posteres/y2k.png" alt="Pôster Y2K">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Y2K</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="13">
-                            <span class="poster-number">13</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/eva01.png" aria-label="Abrir pôster EVA-01">
-                                <img src="assets/img/posteres/eva01.png" alt="Pôster EVA-01">
-                            </button>
-                            <div class="poster-info">
-                                <h3>EVA-01</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="14">
-                            <span class="poster-number">14</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/steampunk.png" aria-label="Abrir pôster Steampunk">
-                                <img src="assets/img/posteres/steampunk.png" alt="Pôster Steampunk">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Steampunk</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="15">
-                            <span class="poster-number">15</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/cyberpunk.png" aria-label="Abrir pôster Cyberpunk">
-                                <img src="assets/img/posteres/cyberpunk.png" alt="Pôster Cyberpunk">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Cyberpunk</h3>
-                            </div>
-                        </article>
-                        <article class="poster-card" data-index="16">
-                            <span class="poster-number">16</span>
-                            <button class="poster-button" type="button" data-poster="assets/img/posteres/veritatem.png" aria-label="Abrir pôster Veritatem">
-                                <img src="assets/img/posteres/veritatem.png" alt="Pôster Veritatem">
-                            </button>
-                            <div class="poster-info">
-                                <h3>Veritatem</h3>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Poster Modal -->
-        <div class="poster-modal" id="posterModal" aria-hidden="true" role="dialog" aria-label="Visualização do pôster">
-            <div class="poster-modal-backdrop" data-close="true"></div>
-            <button class="poster-modal-nav poster-modal-prev" type="button" aria-label="Pôster anterior">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            <div class="poster-modal-content" role="document">
-                <button class="poster-modal-close" type="button" data-close="true" aria-label="Fechar pôster">✕</button>
-                <img id="posterModalImage" src="" alt="">
-                <div class="poster-modal-counter" id="posterModalCounter"></div>
-            </div>
-            <button class="poster-modal-nav poster-modal-next" type="button" aria-label="Próximo pôster">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
+        <div class="project__title"><h3>Coletaí</h3><span>01 / UX/UI</span></div>
+        <p>Estimulando a coleta seletiva na Praia de Iracema.</p>
+        <span class="project__read">Ver o projeto</span>
+      </a>
+      <a class="project project--biomat" href="./projeto-biomat.html">
+        <div class="device-stage device-stage--laptop">
+          <div class="device-shadow" aria-hidden="true"></div>
+          <div class="laptop-mockup floating-device">
+            <img class="laptop-mockup__frame" src="./assets/img/projects/laptop-frame.webp" alt="" width="1536" height="1024" loading="eager">
+            <div class="laptop-mockup__screen"><img src="./assets/img/projects/biomat-register.webp" alt="BIOMAT na tela de um laptop: formulário para registrar atividades do laboratório." width="1348" height="926" loading="eager"></div>
+          </div>
         </div>
+        <div class="project__title"><h3>BIOMAT</h3><span>02 / UX/UI</span></div>
+        <p>Reimaginando o fluxo de anotação e organização de informações para bolsistas de Bioquímica</p>
+        <span class="project__read">Ver o projeto</span>
+      </a>
+      <a class="cinema-link" href="./projeto-cinema.html"><span>Trabalho no Cinema, identidade visual</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section" id="contato">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-header">
-                        <span class="section-label">Vamos conversar?</span>
-                        <h2 class="section-title-large">Contato</h2>
-                        <p class="contact-description">Estou aberto a projetos e colaborações em Design Gráfico, Produtos Digitais e UX/UI.</p>
-                    </div>
-                    <div class="contact-links-grid">
-                        <a href="mailto:yuridcastro@alu.ufc.br" class="contact-link">
-                            <span class="contact-link-label">Email</span>
-                            <span class="contact-link-value">yuridcastro@alu.ufc.br</span>
-                        </a>
-                        <a href="https://wa.me/5585999836630" target="_blank" rel="noopener" class="contact-link">
-                            <span class="contact-link-label">WhatsApp</span>
-                            <span class="contact-link-value">+55 85 99983-6630</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener" class="contact-link">
-                            <span class="contact-link-label">LinkedIn</span>
-                            <span class="contact-link-value">/yuridcastro</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section class="archive-band" id="acervo" tabindex="-1" aria-labelledby="poster-title">
+    <div class="shell">
+      <div class="poster-heading"><h2 id="poster-title">Pôsteres</h2><div class="poster-controls"><span id="poster-position" aria-live="polite">1–4 de 16</span><button id="poster-prev" type="button" aria-label="Pôsteres anteriores" aria-controls="poster-track">←</button><button id="poster-next" type="button" aria-label="Próximos pôsteres" aria-controls="poster-track">→</button></div></div>
+      <div class="poster-track" id="poster-track" tabindex="0" role="region" aria-label="Galeria de 16 pôsteres; use as setas para navegar">
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/imensurable-love.webp" data-titulo="Imensurable Love">
+              <img src="./assets/img/thumb/imensurable-love.webp" alt="Cruz vermelha sobre uma composição gestual em preto e branco." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Imensurable Love</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">01</span>
+              <h3>Imensurable Love</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/carry-your-cross.webp" data-titulo="Carry Your Cross">
+              <img src="./assets/img/thumb/carry-your-cross.webp" alt="Composição tipográfica Carry Your Cross com uma figura em preto e branco." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Carry Your Cross</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">02</span>
+              <h3>Carry Your Cross</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/be-not-afraid.webp" data-titulo="Be Not Afraid">
+              <img src="./assets/img/thumb/be-not-afraid.webp" alt="Tipografia preta expressiva e um cão sobre fundo branco." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Be Not Afraid</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">03</span>
+              <h3>Be Not Afraid</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/inaction.webp" data-titulo="Inaction">
+              <img src="./assets/img/thumb/inaction.webp" alt="Aproximação de duas mãos entre as palavras Inaction e Action." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Inaction</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">04</span>
+              <h3>Inaction</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/onde-flor.webp" data-titulo="Onde Flor">
+              <img src="./assets/img/thumb/onde-flor.webp" alt="Flores coloridas e tipografia sobre um fundo azul e amarelo." width="654" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Onde Flor</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">05</span>
+              <h3>Onde Flor</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/unlucky.webp" data-titulo="Unlucky">
+              <img src="./assets/img/thumb/unlucky.webp" alt="Composição abstrata em azul, verde e violeta com uma cruz." width="600" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Unlucky</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">06</span>
+              <h3>Unlucky</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/salomao.webp" data-titulo="Salomão">
+              <img src="./assets/img/thumb/salomao.webp" alt="Tipografia preta acima de um campo de flores." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Salomão</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">07</span>
+              <h3>Salomão</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/ser-gentil.webp" data-titulo="Ser Gentil">
+              <img src="./assets/img/thumb/ser-gentil.webp" alt="Letras grandes em preto e branco e personagens ilustrados." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Ser Gentil</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">08</span>
+              <h3>Ser Gentil</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/chaos.webp" data-titulo="Chaos">
+              <img src="./assets/img/thumb/chaos.webp" alt="Colagem monocromática com grafismos e caracteres orientais." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Chaos</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">09</span>
+              <h3>Chaos</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/you-are-finite.webp" data-titulo="You Are Finite">
+              <img src="./assets/img/thumb/you-are-finite.webp" alt="Tipografia You Are Finite com personagens ilustrados em tons suaves." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar You Are Finite</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">10</span>
+              <h3>You Are Finite</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/devil-may-cry.webp" data-titulo="Devil May Cry">
+              <img src="./assets/img/thumb/devil-may-cry.webp" alt="Colagem de personagens e tipografia Devil May Cry." width="636" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Devil May Cry</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">11</span>
+              <h3>Devil May Cry</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/y2k.webp" data-titulo="Y2K">
+              <img src="./assets/img/thumb/y2k.webp" alt="Colagem Y2K com cores vivas, retrato e referências digitais." width="635" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Y2K</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">12</span>
+              <h3>Y2K</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/eva-01.webp" data-titulo="EVA-01">
+              <img src="./assets/img/thumb/eva-01.webp" alt="Composição violeta, verde e preta com o personagem EVA-01." width="635" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar EVA-01</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">13</span>
+              <h3>EVA-01</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/steampunk.webp" data-titulo="Steampunk">
+              <img src="./assets/img/thumb/steampunk.webp" alt="Colagem em azul petróleo com referências mecânicas e tipografia." width="635" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Steampunk</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">14</span>
+              <h3>Steampunk</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/cyberpunk.webp" data-titulo="Cyberpunk">
+              <img src="./assets/img/thumb/cyberpunk.webp" alt="Personagem ilustrado e tipografia Cyberpunk em ciano e violeta." width="635" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Cyberpunk</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">15</span>
+              <h3>Cyberpunk</h3></figcaption>
+          </figure>
+<figure class="piece">
+            <div class="poster-card" tabindex="0" role="group" aria-label="Carta 3D. Arraste para girar; use as setas para virar e Home para voltar à frente."><div class="poster-card__turn"><a class="piece__open" href="./assets/img/full/veritatem.webp" data-titulo="Veritatem">
+              <img src="./assets/img/thumb/veritatem.webp" alt="Composição monocromática com figura central e tipografia Veritatem." width="635" height="900" loading="lazy" decoding="async">
+              <span class="sr-only">Ampliar Veritatem</span>
+            </a><i class="poster-card__edge poster-card__edge--left" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--right" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--top" aria-hidden="true"></i><i class="poster-card__edge poster-card__edge--bottom" aria-hidden="true"></i><div class="poster-card__back" aria-hidden="true"><img src="./assets/img/collection/card-back.webp" alt="Verso da coleção YDHC" width="600" height="900" loading="lazy"></div></div></div>
+            <figcaption>
+              <span class="piece__n">16</span>
+              <h3>Veritatem</h3></figcaption>
+          </figure>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer-new">
-        <div class="container">
-            <div class="footer-content">
-                <span class="footer-logo">YDHC</span>
-                <p class="footer-text">&copy; <span id="year"></span> Yuri de Castro. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+</main>
 
-    <script src="assets/js/main.js"></script>
+<!-- Contato -->
+<footer class="contact shell" id="contato" tabindex="-1">
+  <div class="head">
+    
+    <h2 class="head__title">Contato</h2>
+    
+  </div>
+  <div class="contact__row">
+    <a class="mailto" href="mailto:yuridcastro@alu.ufc.br">yuridcastro@alu.ufc.br</a>
+    <button type="button" class="link copy-mail" data-copiar="yuridcastro@alu.ufc.br">Copiar e-mail</button>
+    <a class="link" href="https://www.linkedin.com/in/yuridcastro/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+  </div>
+  <div class="footer">
+    <span class="wordmark">YDHC</span>
+    <span>© 2026 Yuri de Castro</span>
+    <button id="rever" type="button" class="link" hidden>Abrir o pack novamente</button>
+    <a class="link" href="#inicio">Voltar ao topo</a>
+  </div>
+</footer>
+
+</div>
+
+<dialog class="viewer" id="visor" aria-labelledby="visor-titulo">
+  <div class="viewer__box">
+    <div class="viewer__top">
+      <span class="viewer__count" id="visor-contador"></span>
+      <button type="button" class="viewer__close">Fechar ✕</button>
+    </div>
+    <figure>
+      <img id="visor-img" alt="">
+    </figure>
+    <h2 id="visor-titulo"></h2>
+    <div class="viewer__rail" id="visor-trilho" aria-label="Todas as peças"></div>
+    <div class="viewer__bottom">
+      <div class="viewer__nav">
+        <button type="button" id="visor-ant">← Anterior</button>
+        <button type="button" id="visor-prox">Próxima →</button>
+      </div>
+    
+    </div>
+  </div>
+</dialog>
+
+<p class="sr-only" id="aviso" role="status" aria-live="polite"></p>
+<script>
+  if (window.YDHC_ABERTURA) {
+    var s = document.createElement('script');
+    s.src = './assets/js/opening.js'; s.defer = true;
+    document.head.appendChild(s);
+  }
+</script>
+<script src="./assets/js/posters.js" defer></script>
+  <script src="./assets/js/site.js" defer></script>
 </body>
 </html>
