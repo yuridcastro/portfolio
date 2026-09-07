@@ -1,0 +1,16 @@
+{
+  "name": "ydhc-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.js",
+    "build:opening": "node scripts/build-opening.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  }
+}
