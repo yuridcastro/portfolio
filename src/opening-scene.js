@@ -1,7 +1,8 @@
 import * as THREE from 'three';
+import {extractionHandoff} from './extraction-handoff.js';
 import {createGround,groundShadow,hoverPose,GROUND_Y} from './ground.js';
 import {createAtmosphere, renderOpeningLayers} from './atmosphere.js';
-import { clamp, smooth, out, mix, stripVertex, pouchVertex, extractionPose, assemblyTiming, cardPose } from './opening-state.js';
+import { clamp, smooth, out, mix, stripVertex, pouchVertex, extractionPose, assemblyTiming, cardPose, shufflePose, revealPose } from './opening-state.js';
 const W = 1.25, H = 1.90, TOP = .90;
 export function loadImage(url) {
   return new Promise((resolve, reject) => {
@@ -147,7 +148,8 @@ export class OpeningScene {
   draw(frame, pointer, elapsed) {
     const { cut, lift, light, cards, assembly } = frame;
     const hover=hoverPose(elapsed);
-    this.pack.position.y = -.05 + hover.y - smooth(clamp((cards-.72)/.28)) * 1.3 - out(assembly) * 1.5;
+    const handoff=extractionHandoff(cards);
+    this.pack.position.y = -.05 + hover.y - handoff.drop - out(assembly) * 1.5;
     this.camera.position.z=this.cameraDistance + smooth(light)*1.8;
     this.camera.position.y=.12+smooth(light)*.18;
     const dt = Math.max(0,Math.min(.06,elapsed-this.lastTime));this.lastTime=elapsed;
@@ -193,7 +195,7 @@ export class OpeningScene {
     });
     rimPos.needsUpdate=true;this.sealRim.geometry.computeVertexNormals();
     this.sealRim.visible=lift<1;this.sealRim.material.opacity=this.strip.material.opacity;
-    const luminous = smooth(lift) * .08 + smooth(light) * .42;
+    const luminous = smooth(lift) * .05 + smooth(light) * .28;
     this.glow.material.uniforms.opacity.value = luminous * (1 - out(assembly));
     this.light.intensity = luminous * .45 * (1 - out(assembly));
     // Use packet-local coordinates for extraction; depth testing hides the stack
@@ -201,22 +203,31 @@ export class OpeningScene {
     this.pack.updateMatrixWorld(true);
     // A pack-local clipping plane removes every fragment still inside the pouch.
     // It follows pitch/yaw, so even a rear view cannot expose cards through foil.
-    this.mouthPlane.set(new THREE.Vector3(0,1,0),-TOP).applyMatrix4(this.pack.matrixWorld);
+    // Recess the safety cut inside the open pouch. The real foil lip now
+    // occludes the card instead of an invisible plane across the opening.
+    const cavityDepth = .12 * smooth(clamp((lift - .75) / .25));
+    this.mouthPlane.set(new THREE.Vector3(0,1,0),-(TOP-cavityDepth)).applyMatrix4(this.pack.matrixWorld);
     this.cards.forEach((card,i)=>{
-      const pose=extractionPose(cards,i);
+      const pose=extractionPose(clamp(cards/.28),i),reveal=revealPose(cards,i);
+      pose.fan=reveal.spread;
       const slot=[0,-1,1][i],narrow=this.camera.aspect<.85;
       const timing=assemblyTiming(assembly,i);
       const opacidade=1-Math.max(timing.saida,i===0?timing.troca:0);
-      card.visible=cards>0 && opacidade>.003;
+      card.visible=(lift>.75 || cards>0) && opacidade>.003;
       const inside=this.pack.localToWorld(new THREE.Vector3(0,pose.y,pose.z));
-      const destination=new THREE.Vector3(slot*(narrow?.59:1.03),.48+(i===1?.06:0),.45);
-      card.position.copy(inside).lerp(destination,pose.fan);
+      inside.y+=handoff.drop;
+      const destination=new THREE.Vector3(slot*(narrow?.59:1.03)*pose.fan,.48+(i===1?.06:0)*pose.fan,.45+(2-reveal.order)*.05);
+      card.position.copy(inside).lerp(destination,handoff.table);
       card.position.y+=Math.sin(pose.fan*Math.PI)*.35;
-      card.quaternion.copy(this.pack.quaternion).slerp(new THREE.Quaternion(),pose.fan);
+      card.quaternion.copy(this.pack.quaternion).slerp(new THREE.Quaternion(),handoff.table);
+      card.rotateY(reveal.angle);
       card.scale.setScalar(1);
       if(assembly>0 && this.assemblyPilha && this.assemblyHero) {
+        // A profundidade agora vem da posição na pilha, e é ela que o corte
+        // troca. 0,045 de passo deixa folga sobre a espessura de uma carta.
+        const shuffle=shufflePose(assembly,i);
+        const PLANO=.47-shuffle.ordem*.045;
         // Converte retângulos de tela em unidades de mundo no plano z=PLANO.
-        const PLANO=.45-i*.09;
         const u=2*(this.camera.position.z-PLANO)*Math.tan(17*Math.PI/180)/this.canvas.clientHeight;
         const paraMundo=(r,folgaX=0,folgaY=0)=>({
           x:(r.x+folgaX-this.canvas.clientWidth/2)*u,
@@ -231,8 +242,8 @@ export class OpeningScene {
         const pilha={...paraMundo(this.assemblyPilha,desloc,0),giro:giroPilha,inclina:0};
         const hero ={...paraMundo(this.assemblyHero),giro:0,inclina:0};
         const p=cardPose(inicio,pilha,hero,timing);
-        card.position.set(p.x,p.y,PLANO);
-        card.rotation.set(p.inclina,0,p.giro);
+        card.position.set(p.x+shuffle.x*CARD_W*p.escala,p.y-shuffle.y*CARD_W*p.escala,PLANO);
+        card.rotation.set(p.inclina,0,p.giro+shuffle.angle);
         card.scale.set(p.escala,p.escala*mix(1,(this.assemblyHero.height/this.assemblyHero.width)/ (1.066/.758),timing.cresce),1);
         // A carta de trás não precisa de espessura durante o crescimento,
         // senão a borda metálica aparece do tamanho de uma parede.
@@ -241,7 +252,7 @@ export class OpeningScene {
         card.userData.edge.visible=true;
         // Keep the packet quaternion until extraction is complete.
       }
-      card.traverse(object=>{if(object.material){object.material.transparent=assembly>0;object.material.opacity=opacidade;object.material.clippingPlanes=pose.fan===0 && assembly===0?[this.mouthPlane]:[];}});
+      card.traverse(object=>{if(object.material){object.material.transparent=assembly>0;object.material.opacity=opacidade;object.material.clippingPlanes=cards<.28 && assembly===0?[this.mouthPlane]:[];}});
     });
     this.pack.visible = assembly < .9;
     const shadow=groundShadow(this.pack.position.y-GROUND_Y,this.yaw);
