@@ -193,8 +193,8 @@
   // Só anima o que está à vista.
   if ('IntersectionObserver' in window) {
     const olho = new IntersectionObserver((entradas) => {
-      entradas.forEach((e) => e.target.classList.toggle('is-vivo', e.isIntersecting));
-    }, { rootMargin: '120px 0px' });
+      entradas.forEach((e) => { if(e.isIntersecting) { e.target.classList.add('is-vivo'); olho.unobserve(e.target); } });
+    }, { threshold: .15 });
     palcos.forEach((p) => olho.observe(p));
   } else {
     palcos.forEach((p) => p.classList.add('is-vivo'));
@@ -204,7 +204,7 @@
 
   // Inclinação que segue o cursor. Escrevo em custom properties em vez de
   // em transform, senão eu sobrescreveria a animação do CSS.
-  const MAX_Y = 3, MAX_X = 2;
+  const MAX_Y = .7, MAX_X = .45;
   const TAU_ENTRA = 220, TAU_VOLTA = 380;  // ms; volta mais macia que a ida
 
   palcos.forEach((palco) => {
