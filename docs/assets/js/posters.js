@@ -1,47 +1,11 @@
 /* Direct manipulation of solid CSS 3D poster cards. No GPU context per card. */
 (() => {
-  document.querySelectorAll('.poster-track').forEach(track => {
-    let drag = null, suppressUntil = 0;
-    track.addEventListener('dragstart', e => e.preventDefault());
-    track.addEventListener('pointerdown', e => {
-      e.stopPropagation();
-      if (e.pointerType !== 'mouse' || e.button !== 0) return;
-      drag = { id:e.pointerId, x:e.clientX, left:track.scrollLeft, moved:false };
-    }, true);
-    track.addEventListener('pointermove', e => {
-      if (!drag || drag.id !== e.pointerId) return;
-      const dx = e.clientX - drag.x;
-      if (!drag.moved && Math.abs(dx) < 7) return;
-      drag.moved = true;
-      track.setPointerCapture(e.pointerId);
-      track.classList.add('is-dragging');
-      track.scrollLeft = drag.left - dx;
-      e.preventDefault(); e.stopPropagation();
-    }, true);
-    const release = e => {
-      if (!drag || drag.id !== e.pointerId) return;
-      if (drag.moved) suppressUntil = performance.now() + 450;
-      drag = null; track.classList.remove('is-dragging');
-      if (track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
-    };
-    track.addEventListener('pointerup', release);
-    track.addEventListener('pointercancel', release);
-    track.addEventListener('lostpointercapture', release);
-    track.addEventListener('click', e => {
-      if (e.detail && performance.now() < suppressUntil) { e.preventDefault(); e.stopImmediatePropagation(); }
-    }, true);
-  });
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   // No toque, arrastar a carta e rolar a trilha disputam o mesmo gesto e o
   // carrossel fica preso. Em ponteiro grosso a carta não gira: o swipe rola
   // a trilha e o toque abre o pôster no visor.
   const toque = matchMedia('(hover: none), (pointer: coarse)').matches;
   document.querySelectorAll('.poster-card').forEach(card => {
-    // Carousel cards are links, not independently rotatable controls.
-    if (card.closest?.('.poster-track')) {
-      card.removeAttribute('tabindex'); card.removeAttribute('role'); card.removeAttribute('aria-label');
-      return;
-    }
     if (toque) { card.removeAttribute('tabindex'); card.removeAttribute('role');
                  card.removeAttribute('aria-label'); return; }
     const turn = card.querySelector('.poster-card__turn');
