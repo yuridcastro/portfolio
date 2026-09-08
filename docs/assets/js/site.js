@@ -160,13 +160,15 @@
   /* ---------- 3. Copiar e-mail ---------- */
   $$('[data-copiar]').forEach((botao) => {
     const original = botao.textContent;
+    let feedbackTimer;
     botao.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(botao.dataset.copiar);
         botao.dataset.state = 'done';
-        botao.textContent = 'E-mail copiado';
+        botao.textContent = 'Copiado ✓';
+        clearTimeout(feedbackTimer);
         avisar('E-mail copiado.');
-        setTimeout(() => { botao.textContent = original; delete botao.dataset.state; }, 2200);
+        feedbackTimer = setTimeout(() => { botao.textContent = original; delete botao.dataset.state; }, 2200);
       } catch {
         location.href = `mailto:${botao.dataset.copiar}`;
       }
@@ -228,8 +230,12 @@
       aparelho.style.setProperty('--lean-x', x.toFixed(2) + 'deg');
       aparelho.style.setProperty('--lean-y', y.toFixed(2) + 'deg');
       aparelho.style.setProperty('--lean-scale', e.toFixed(4));
+      palco.style.setProperty('--shadow-shift-x',(-y*3).toFixed(2)+'px');
+      palco.style.setProperty('--shadow-shift-y',(x*2).toFixed(2)+'px');
       const parado = Math.abs(alvoX - x) < .02 && Math.abs(alvoY - y) < .02 && Math.abs(alvoE - e) < .0005;
+      if (parado && dentro) { anterior=0; return; }
       if (parado && !dentro) {
+        palco.style.removeProperty('--shadow-shift-x');palco.style.removeProperty('--shadow-shift-y');
         aparelho.style.removeProperty('--lean-x');
         aparelho.style.removeProperty('--lean-y');
         aparelho.style.removeProperty('--lean-scale');
@@ -240,7 +246,7 @@
     const rodar = () => { if (!quadro) quadro = requestAnimationFrame(pintar); };
 
     palco.addEventListener('pointermove', (ev) => {
-      if (ev.pointerType !== 'mouse') return;
+      if (ev.pointerType !== 'mouse' || quieto.matches) return;
       const r = palco.getBoundingClientRect();
       const nx = (ev.clientX - r.left) / r.width  - .5;
       const ny = (ev.clientY - r.top)  / r.height - .5;
@@ -251,6 +257,13 @@
       rodar();
     });
 
+    quieto.addEventListener('change',()=>{
+      if (!quieto.matches) return;
+      cancelAnimationFrame(quadro);quadro=0;anterior=0;dentro=false;
+      alvoX=alvoY=x=y=0;alvoE=e=1;
+      aparelho.style.removeProperty('--lean-x');aparelho.style.removeProperty('--lean-y');aparelho.style.removeProperty('--lean-scale');
+      palco.style.removeProperty('--shadow-shift-x');palco.style.removeProperty('--shadow-shift-y');
+    });
     palco.addEventListener('pointerleave', () => {
       dentro = false; alvoX = 0; alvoY = 0; alvoE = 1; rodar();
     });

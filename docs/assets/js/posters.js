@@ -20,9 +20,17 @@
     }, true);
     const release = e => {
       if (!drag || drag.id !== e.pointerId) return;
-      if (drag.moved) suppressUntil = performance.now() + 450;
+      const moved=drag.moved;
+      if (moved) suppressUntil = performance.now() + 450;
       drag = null; track.classList.remove('is-dragging');
       if (track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
+      if (moved && e.type !== 'pointercancel' && track.children?.length) {
+        const first=track.children[0].offsetLeft;
+        const max=Math.max(0,track.scrollWidth-track.clientWidth);
+        const positions=[...track.children].map(card=>Math.min(max,Math.max(0,card.offsetLeft-first)));
+        const left=positions.reduce((nearest,value)=>Math.abs(value-track.scrollLeft)<Math.abs(nearest-track.scrollLeft)?value:nearest,positions[0]);
+        track.scrollTo({left,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+      }
     };
     track.addEventListener('pointerup', release);
     track.addEventListener('pointercancel', release);

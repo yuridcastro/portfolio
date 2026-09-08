@@ -185,3 +185,34 @@ body{background:#e9ebed}
 
 /* Section focus after the opening; controls retain their focus indicators. */
 #inicio:focus,#projetos:focus{outline:none}
+
+/* Ultra-rare frame: restrained color on the border, clear portrait. */
+.opening-card--rare:not(.is-back){border-color:#c9e1f2;background:linear-gradient(135deg,#f1fcff,#d2d6eb 44%,#f3e3ee 70%,#d1ece8);box-shadow:0 0 0 2px #e5f9ff,0 12px 35px #081a3440}
+.opening-card--rare:not(.is-back)::after{content:"";position:absolute;inset:0;border:3px solid transparent;border-image:linear-gradient(125deg,#c7ebfa,#e5c6ee,#bce9dc,#f0e2ba) 1;pointer-events:none}
+.opening-card strong{font-size:clamp(13px,1.3vw,20px)}
+.opening-card small{font-size:clamp(8px,.7vw,11px)}
+
+/* Collection art direction. Full art for Yuri and Feeling Lucky. */
+.opening-card:not(.is-back){background:linear-gradient(145deg,#082b29,#245d50);color:#f1f8ff}
+.opening-card--biomat:not(.is-back){background:linear-gradient(145deg,#071c35,#244961)}
+.opening-card:not(.is-back) small{color:#c9e4eb}
+.opening-card--rare:not(.is-back){background:#070e21;border:3px solid #dfd0a6;box-shadow:0 0 0 1px #abdbf1,0 0 24px #94beef30}
+.opening-card--rare:not(.is-back)>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.opening-card--rare:not(.is-back)>span{position:absolute;top:8px;left:8px;right:8px;z-index:2}
+.opening-card--rare:not(.is-back)>strong{position:absolute;left:12px;bottom:30px;z-index:2;color:#fff;font-size:clamp(19px,2.4vw,32px);line-height:1;text-transform:uppercase;max-width:85%}
+.opening-card--rare:not(.is-back)>small{position:absolute;left:12px;bottom:12px;z-index:2;color:#eff9ff}
+.opening-card--rare:not(.is-back)::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#070e21 0%,#070e21ba 22%,transparent 57%);z-index:1}
+.opening-card--rare:not(.is-back)::after{border-width:4px;border-image:linear-gradient(120deg,#f1d998,#beeeff,#ceb2f6,#f6d5a0) 1}
+
+.opening-card--cinema:not(.is-back){background:linear-gradient(145deg,#210e1c,#6f233d)}
+.opening-card--posters:not(.is-back){background:linear-gradient(145deg,#600615,#ea253c)}
+.opening-card:not(.is-back)>img{background:transparent}
+
+/* Regular collection: original silver stock and the project's own artwork. */
+.opening-card:not(.opening-card--rare):not(.is-back){background:linear-gradient(125deg,#f6f7f7,#c9cccf 45%,#ededec 55%,#aeb5bd);color:#202629;box-shadow:0 12px 24px #0003}
+.opening-card:not(.opening-card--rare):not(.is-back)>small{color:#30383f}
+.opening-card--coletai:not(.is-back)>img{object-fit:cover;object-position:top;border:3px solid #202628;background:#fff}
+.opening-card--biomat:not(.is-back)>img{object-fit:cover;object-position:70% center;border:1px solid #969d9b}
+.opening-card--cinema:not(.is-back)>img{object-fit:cover;object-position:25% center;border-left:6px dashed #26272a;border-right:6px dashed #26272a}
+.opening-card--posters:not(.is-back)>img{position:absolute;inset:13% 3% 3%;width:94%;height:84%;object-fit:contain}
+.opening-card--posters:not(.is-back)>strong,.opening-card--posters:not(.is-back)>small{display:none}
