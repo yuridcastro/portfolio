@@ -211,3 +211,9 @@ body{background:linear-gradient(115deg,#f1f1f1,#d5d5d5 44%,#ececec 72%,#c9c9c9);
  .device-stage--laptop{--breath-rise:-4px}
 }
 .opening[data-renderer=webgl2]:before{display:none}
+
+/* Hide the outline on sections focused after the opening */
+#inicio:focus,
+#projetos:focus {
+  outline: none;
+}
